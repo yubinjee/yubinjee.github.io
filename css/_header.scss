@@ -1,0 +1,15 @@
+header {
+    align-items: center;
+    .logo {
+        text-decoration: none;
+        font-size: $fontSizeLarge;
+        font-weight: 600;
+        color: black;
+        padding: 10px;
+        font-family: Helvetica, sans-serif;
+        transition: 0.4s;
+        &:hover {
+            color: $red;
+        }
+    }
+}

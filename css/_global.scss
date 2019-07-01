@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    line-height: 1.25;
+}
+h1 {
+    font-size: $headingOne;
+    letter-spacing: 2px;
+}
+h2 {
+    font-size: $headingTwo;
+}
+h3 {
+    font-size: $headingThree;
+}
+h4 {
+    font-size: $headingFour;
+}
+h5 {
+    font-size: $headingFive;
+}
+h6 {
+    font-size: $headingSix;
+}
+p {
+    $fontSizeMedium: 16px;
+}
+
+// reset the button style
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    text-decoration: none;
+    color: $red;
+    font-size: $headingFour;
+    letter-spacing: 1px;
+    font-weight: 500;
+       
+    span {
+        position: relative;
+        &:before {
+            content: "";
+            background-color: $red;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            z-index: -1;
+            transform: translateY(900%);
+            transition: 0.2s;
+        }
+    }
+
+}

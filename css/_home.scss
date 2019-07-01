@@ -1,0 +1,126 @@
+.intro {
+    margin-top: 100px;
+    .heading {
+        margin-bottom: 20px;
+    }
+    .sub-heading {
+        font-weight: 400;
+    }
+}
+
+.avatar-background {
+    width: 200px;
+    height: 200px;
+    background: #f6f6f6;
+    margin-bottom: 40px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    .avatar {
+        left: -7px;
+    }
+    .hair {
+        z-index: 3;
+        top: 30px;
+        left: 50px;
+        width: 120px;
+        height: 200px;
+        border-radius: 100px 100px 0 0;
+        background: $black;
+    }
+    .fringe {
+        z-index: 99;
+        top: 53px;
+        left: 95px;
+        width: 63px;
+        height: 28px;
+        background: $black;
+        border-radius: 0 0 100px 100px;
+        transform: rotate(30deg);
+        &:before {
+            position: absolute;
+            content: "";
+            top: 18px;
+            left: -20px;
+            width: 47px;
+            height: 30px;
+            background: $black;
+            border-radius: 100%;
+            transform: rotate(-45deg);
+        }
+    }
+    .face {
+        border-radius: 100px 100px 130px 130px;
+        z-index: 20;
+        top: 70px;
+        left: 70px;
+        width: 80px;
+        height: 80px;
+        background: #F0BEAF;
+    }
+    .eye {
+        z-index: 30;
+        top: 100px;
+        left: 80px;
+        width: 10px;
+        height: 10px;
+        background: $black;
+        border-radius: 100%;
+        &:before {
+            position: absolute;
+            content: "";
+            left: 50px;
+            width: 10px;
+            height: 10px;
+            background: $black;
+            border-radius: 100%;
+        }
+    }
+    .nose {
+        z-index: 20;
+        top: 100px;
+        left: 107px;
+        width: 8px;
+        height: 14px;
+        background: #DB9B99;
+        border-radius: 100px;
+    }
+    .mouth {
+        width: 500px; 
+        height: 100px;  
+        border: solid 5px #000;
+        border-color: #000 transparent transparent transparent;
+        border-radius: 50%/100px 100px 0 0;
+    }
+    .neck {
+        z-index: 13;
+        width: 30px;
+        height: 35px;
+        background: #DB9B99;
+        top: 130px;
+        left: 97px;
+        border-radius: 100%;
+    }
+    .mouth {
+        width: 30px;
+        height: 30px;
+        top: 96px;
+        z-index: 20;
+        left: 100px;
+        border: solid 3px $red;
+        border-color: transparent transparent $red transparent;
+        border-radius: 0 0 150px 30%/90px;
+    }
+    .body {
+        z-index: 10;
+        top: 150px;
+        left: 60px;
+        width: 100px;
+        height: 150px;
+        background: #bcc8d8;
+        border-radius: 100px;
+    }
+}
+.avatar, .hair, .fringe, .face, .eye, .nose, .mouth, .neck, .body {
+    position: absolute;
+}
