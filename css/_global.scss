@@ -52,6 +52,7 @@ button {
     font-size: $headingFour;
     letter-spacing: 1px;
     font-weight: 500;
+    transition: $transitionFast;
        
     span {
         position: relative;
@@ -63,8 +64,17 @@ button {
             position: absolute;
             z-index: -1;
             transform: translateY(900%);
-            transition: 0.2s;
+            transition: $transitionFast;
         }
     }
 
+}
+
+@media (min-width: 768px) {
+    /*.btn:hover {
+        color: green;
+        span:before {
+            background-color: green;
+        }
+    }*/
 }

@@ -2,10 +2,10 @@ header {
     align-items: center;
     .logo {
         text-decoration: none;
-        font-size: $fontSizeLarge;
+        font-size: $headingOne;
         font-weight: 600;
         color: black;
-        padding: 10px 40px;
+        padding: 10px 20px 10px 0;
         font-family: Helvetica, sans-serif;
         transition: 0.4s;
         &:hover {
@@ -18,7 +18,8 @@ header {
 
     header {
         .logo {
-            padding: 10px 20px;
+            padding: 10px 40px 10px 0;
+            font-size: $fontSizeLarge;
         }
     }
 

@@ -1,13 +1,22 @@
 .container {
-    /*padding-right: 15px;
-    padding-left: 15px;*/
+    padding-right: 5%;
+    padding-left: 5%;
     margin-right: auto;
     margin-left: auto;
     display: flex;
+    justify-content: center;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
+    .container {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+  }
+ /* @media (min-width: 768px) {
     .container {
       width: 750px;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
   @media (min-width: 992px) {
@@ -19,7 +28,7 @@
     .container {
       width: 1170px;
     }
-  }
+  }*/
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
