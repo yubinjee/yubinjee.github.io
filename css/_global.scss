@@ -9,6 +9,7 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     line-height: 1.25;
+    letter-spacing: 1px;
 }
 h1 {
     font-size: $headingOne;
@@ -19,6 +20,7 @@ h2 {
 }
 h3 {
     font-size: $headingThree;
+    font-weight: 500;
 }
 h4 {
     font-size: $headingFour;
@@ -31,6 +33,9 @@ h6 {
 }
 p {
     $fontSizeMedium: 16px;
+}
+a {
+    color: $black;
 }
 
 // reset the button style
