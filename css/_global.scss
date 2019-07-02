@@ -3,8 +3,12 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
+    scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -51,35 +55,28 @@ button {
     }
 }
 
-.btn {
+.link {
     text-decoration: none;
     color: $red;
     font-size: $headingFour;
     letter-spacing: 1px;
     font-weight: 500;
     transition: $transitionFast;
-       
-    span {
-        position: relative;
-        &:before {
-            content: "";
-            background-color: $red;
-            width: 100%;
-            height: 3px;
-            position: absolute;
-            z-index: -1;
-            transform: translateY(900%);
-            transition: $transitionFast;
-        }
+    position: relative;
+    &:before {
+        content: "";
+        background-color: $red;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        z-index: -1;
+        transform: translateY(900%);
+        transition: $transitionFast;
     }
-
 }
 
 @media (min-width: 768px) {
-    /*.btn:hover {
-        color: green;
-        span:before {
-            background-color: green;
-        }
-    }*/
+    .link:hover {
+        filter: brightness(1.5);
+    }
 }

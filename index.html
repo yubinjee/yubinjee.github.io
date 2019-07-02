@@ -22,39 +22,22 @@
 
             <ul class="navigation-menu">
                 <li>
-                    <a class="btn" href="#" title="Recent works">
-                        <span>Work</span>
+                    <a class="link navigation-link" href="#intro" title="Recent works">
+                        Work
                     </a>
                 </li>
                 <li>
-                    <a class="btn" href="#" title="About me">
-                        <span>About</span>
+                    <a class="link navigation-link" href="#about" title="About me">
+                        About
                     </a>
                 </li>
             </ul>
 
             <div class="mobile-navigation">
 
-                <div>
-                    <button role="button" aria-label="Open the navigation menu" onclick="openNav()" class="icon--burger-menu" id="nav-menu-toggle"></button>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="overlay">
-                    <ul class="navigation-menu">
-                        <li>
-                            <a class="btn" href="#" title="Recent works">
-                                <span>Work</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn" href="#" title="About me">
-                                <span>About</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <button role="button" aria-label="Open the navigation menu" class="icon--burger-menu" id="nav-menu-toggle"></button>
+                <div class="line"></div>
+                <div class="line"></div>
 
             </div>
 
@@ -64,7 +47,7 @@
 
     <main role="main">
 
-        <section class="container intro">
+        <section class="container" id="intro">
 
             <div class="col-xs-12 col-s-11 col-lg-10">
 
@@ -123,8 +106,8 @@
                     <h1 class="heading">Hi, I’m Yu Bin.<br><span class="sub-heading">I’m a designer who sometimes codes.
                             <br>Currently in Berlin.</span></h1>
 
-                    <a href="mailto:yubin.jee@gmail.com" class="btn" title="Send an Email to me">
-                        <span>get in touch</span>
+                    <a href="mailto:yubin.jee@gmail.com" class="link" title="Send an Email to me">
+                        get in touch
                     </a>
                 </div>
 
@@ -133,7 +116,7 @@
 
         </section>
 
-        <section class="container about">
+        <section class="container" id="about">
 
             <div class="row">
                 <h3 class="col-xs-12 col-s-11 col-sm-3">About me</h3>
@@ -147,9 +130,9 @@
                 <p class="col-xs-12 col-s-11 col-sm-8 col-lg-7">
                     I am a self-taught designer and developer. My first professional job was in a small design agency Netzschritt in Heidelberg where I worked as a graphic illustrator at the age of 16.
                     <br><br>After that, I devoted myself to my other passion, fashion, and worked in various fashion companies like Zalando.
-                    During my fashion design degree at the University of Applied Sciences in Berlin, I worked in a sustainable fashion online shop called Loveco as a UI designer and frontend developer where I was able to combine my two favorite topics, fashion and digital products.
+                    During my fashion design degree at the University of Applied Sciences in Berlin, I worked in a sustainable fashion online shop Loveco as a UI designer and frontend developer where I was able to combine my two favorite topics, fashion and digital products.
                     <br><br>At the moment I am working on smaller side projects in UX / UI design, graphic design and frontend development.
-                <br><br><a class="btn" href="#"><span>Download CV</span></a>
+                <br><br><a class="link" href="#"><span>Download CV</span></a>
                 </p>
             </div>
 
@@ -163,15 +146,40 @@
 </body>
 
 <script>
-    // mobile: show navigation menu overlay when toggle
-    function openNav() {
+    window.isNavigationOpen = false;
+
+    function openNavigation () {
+        window.isNavigationOpen = true;
         document.body.classList.add("menu-is-open");
-        document.getElementById("nav-menu-toggle").setAttribute("onClick", "closeNav()");
     }
-    function closeNav() {
+
+    function closeNavigation () {
+        window.isNavigationOpen = false;
         document.body.classList.remove("menu-is-open");
-        document.getElementById("nav-menu-toggle").setAttribute("onClick", "openNav()");
     }
+
+    function toggleNavigation () {
+        if (window.isNavigationOpen) {
+            closeNavigation()
+        } else {
+            openNavigation()
+        }
+    }
+
+    function showContent (event) {
+        event.preventDefault();
+        closeNavigation();
+        window.location.href = event.target.href;
+    }
+
+    document.getElementById("nav-menu-toggle").addEventListener('click', toggleNavigation)
+
+    var mobileNavigationLinks = document.getElementsByClassName('navigation-link');
+
+    for (var i = 0; i < mobileNavigationLinks.length; i++) {
+        mobileNavigationLinks[i].addEventListener('click', showContent);
+    }
+
 </script>
 
 </html>
