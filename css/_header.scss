@@ -13,3 +13,13 @@ header {
         }
     }
 }
+
+@media (min-width: 768px) {
+
+    header {
+        .logo {
+            padding: 10px 20px;
+        }
+    }
+
+}
