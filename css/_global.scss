@@ -70,13 +70,31 @@ button {
         height: 3px;
         position: absolute;
         z-index: -1;
-        transform: translateY(900%);
+        bottom: -5px;
         transition: $transitionFast;
     }
 }
 
 @media (min-width: 768px) {
-    .link:hover {
-        filter: brightness(1.5);
+
+    .link {
+        &:after {
+            content: "→";
+            position: absolute;
+            transition: $transitionFast;
+            right: 0;
+            opacity: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+        &:hover {
+            filter: brightness(2);
+            &:after {
+                transform: translate(100%,-50%);
+                opacity: 1;
+                right: -5px;
+            }
+        }  
     }
+
 }

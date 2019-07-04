@@ -29,12 +29,6 @@
         padding: 10px 20px;
         color: $black;
         font-size: $headingTwo;
-        &:before {
-            width: 0;
-            left: 50%;
-            transform: translate(-50%, 900%);
-            max-width: 50px;
-        }
     }
 }
 
@@ -110,6 +104,12 @@
         .link {
             padding: 10px;
             font-size: $headingFour;
+            &:before {
+                width: 0;
+                left: 50%;
+                transform: translate(-50%, -10px);
+                max-width: calc(100% - 20px);
+            }
             &:hover:before {
                 width: 100%;
             }
