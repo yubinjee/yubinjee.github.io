@@ -8,7 +8,18 @@
     <meta name="Description" content="Portfolio of Yu Bin Jee, UI Designer based in Berlin.">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
+    <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143261376-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143261376-1');
+    </script>
 
 </head>
 
@@ -16,9 +27,11 @@
 
     <header class="container">
 
+        <!-- Logo -->
         <a href="#" class="logo" role="banner" title="Homepage">jeeee</a>
 
-        <nav class="main-navigation" role="navigation">
+        <!-- Navigation -->
+        <nav class="navigation" role="navigation">
 
             <ul class="navigation-menu">
                 <li>
@@ -34,11 +47,9 @@
             </ul>
 
             <div class="mobile-navigation">
-
                 <button role="button" aria-label="Open the navigation menu" class="icon--burger-menu" id="nav-menu-toggle"></button>
                 <div class="line"></div>
                 <div class="line"></div>
-
             </div>
 
         </nav>
@@ -47,10 +58,11 @@
 
     <main role="main">
 
+        <!-- intro -->
         <section class="container" id="intro">
-
             <div class="col-xs-12 col-s-11 col-lg-10">
 
+                <!-- avatar -->
                 <div class="avatar-background">
 
                     <div class="cloud-group">
@@ -70,6 +82,7 @@
                             <div class="cloud cloud-right"></div>
                         </div>
                     </div>
+
                     <div class="cloud-group">
                         <div class="cloud-item">
                             <div class="cloud cloud-center"></div>
@@ -101,21 +114,20 @@
 
                 </div>
 
-
+                <!-- text -->
                 <div class="text">
                     <h1 class="heading">Hi, I’m Yu Bin.<br><span class="sub-heading">I’m a designer who sometimes codes.
-                            <br>Currently in Berlin.</span></h1>
-
+                        <br>Currently in Berlin.</span>
+                    </h1>
                     <a href="mailto:yubin.jee@gmail.com" class="link" title="Send an Email to me">
                         get in touch
                     </a>
                 </div>
 
-
             </div>
-
         </section>
 
+        <!-- about -->
         <section class="container" id="about">
 
             <div class="row">
@@ -136,9 +148,11 @@
                 </p>
             </div>
 
-            
-            
+        </section>
 
+        <!-- footer -->
+        <footer class="container" id="footer">
+            <p>Copyright © Yu Bin Jee 2019 <br>All rights reserved </p>
         </section>
 
     </main>
