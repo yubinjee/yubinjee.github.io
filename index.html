@@ -25,7 +25,7 @@
 
 <body>
 
-    <header class="container">
+    <header class="container" id="myHeader">
 
         <!-- Logo -->
         <a href="#" class="logo" role="banner" title="Homepage">jeeee</a>
@@ -56,7 +56,7 @@
 
     </header>
 
-    <main role="main">
+    <main role="main" class="content">
 
         <!-- intro -->
         <section class="container" id="intro">
@@ -160,43 +160,10 @@
 
     </main>
 
+    <script type="text/javascript" src="js/navigation.js"></script>
+
 </body>
 
-<script>
-    window.isNavigationOpen = false;
 
-    function openNavigation () {
-        window.isNavigationOpen = true;
-        document.body.classList.add("menu-is-open");
-    }
-
-    function closeNavigation () {
-        window.isNavigationOpen = false;
-        document.body.classList.remove("menu-is-open");
-    }
-
-    function toggleNavigation () {
-        if (window.isNavigationOpen) {
-            closeNavigation()
-        } else {
-            openNavigation()
-        }
-    }
-
-    function showContent (event) {
-        event.preventDefault();
-        closeNavigation();
-        window.location.href = event.target.href;
-    }
-
-    document.getElementById("nav-menu-toggle").addEventListener('click', toggleNavigation)
-
-    var mobileNavigationLinks = document.getElementsByClassName('navigation-link');
-
-    for (var i = 0; i < mobileNavigationLinks.length; i++) {
-        mobileNavigationLinks[i].addEventListener('click', showContent);
-    }
-
-</script>
 
 </html>

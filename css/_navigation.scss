@@ -29,6 +29,9 @@
         padding: 10px 20px;
         color: $black;
         font-size: $headingTwo;
+        &:before {
+            width: 0;
+        }
     }
 }
 
@@ -70,7 +73,7 @@
     height: 100%;
     position: fixed;
     .navigation-menu {
-        height: 100%;
+        height: 100vh;
     }
     .line {
         transform: rotate(45deg) translate(-2.5px, -10px);
@@ -104,6 +107,9 @@
         .link {
             padding: 10px;
             font-size: $headingFour;
+            &:hover {
+                color: $red;
+            }
             &:before {
                 width: 0;
                 left: 50%;
@@ -112,6 +118,9 @@
             }
             &:hover:before {
                 width: 100%;
+            }
+            &:after {
+                opacity: 0;
             }
         }
     }
