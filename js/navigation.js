@@ -1,3 +1,39 @@
+/* Hide Header on Scroll Down, show Header on Scroll Up */
+
+setTimeout
+
+var prevScrollpos = window.pageYOffset;
+var header = document.getElementById("myHeader");
+
+/*
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  prevScrollpos = currentScrollPos;
+}
+*/
+
+function stickyHeader() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+window.onscroll = function() {stickyHeader()};
+
+
+
+
+
+
 /* toggle mobile navigation */
 
 window.isNavigationOpen = false;
@@ -32,26 +68,4 @@ var mobileNavigationLinks = document.getElementsByClassName('navigation-link');
 
 for (var i = 0; i < mobileNavigationLinks.length; i++) {
     mobileNavigationLinks[i].addEventListener('click', showContent);
-}
-
-
-
-
-/* Hide Header on Scroll Down, show Header on Scroll Up */
-
-setTimeout
-
-var prevScrollpos = window.pageYOffset;
-var header = document.getElementById("myHeader");
-
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.style.top = "0";
-    header.classList.add("sticky");
-  } else {
-    header.style.top = "-50px";
-    header.classList.remove("sticky");
-  }
-  prevScrollpos = currentScrollPos;
 }
