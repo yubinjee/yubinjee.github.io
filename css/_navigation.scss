@@ -1,5 +1,4 @@
 .navigation {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
 
@@ -9,6 +8,7 @@
     right: 0px;
     bottom: 100%;
     z-index: 100;
+
 }
 
 .navigation-menu {
@@ -103,6 +103,9 @@
 
 @media (min-width: 768px) {
 
+    .navigation {
+        position: relative;
+    }
     .navigation-menu {
         justify-content: flex-end;
         position: relative;

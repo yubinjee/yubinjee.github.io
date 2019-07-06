@@ -1,30 +1,33 @@
-/* Hide Header on Scroll Down, show Header on Scroll Up */
+/* 
+Hide header on scroll Down, 
+Show header on scroll Up */
 
 setTimeout
 
 var prevScrollpos = window.pageYOffset;
 var header = document.getElementById("myHeader");
 
-/*
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-  prevScrollpos = currentScrollPos;
-}
-*/
-
 function stickyHeader() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
+
+    if (window.isNavigationOpen) {
+        header.classList.add("sticky");
+        //prevScrollpos = currentScrollPos;
+    } 
+    else {
+        var currentScrollPos = window.pageYOffset;
+
+        if (prevScrollpos > currentScrollPos) {
+        header.classList.add("sticky");
+        header.style.top = "0px";
+        } 
+        else {
+        header.classList.remove("sticky");
+        header.style.top = "-50px";
+        }
+
+        prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
+
 }
 
 window.onscroll = function() {stickyHeader()};
