@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/assets/yubinjee_cv.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/yubinjee_cv.pdf",
+		"oF": 0
+		},
 	"/css/_footer.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -149,6 +157,14 @@
 		"oF": 1,
 		"sC": 3,
 		"tS": 0
+		},
+	"/project_loveco.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/project_loveco.html",
+		"oF": 0
 		}
 	},
 "hooks": [

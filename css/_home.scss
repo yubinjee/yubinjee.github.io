@@ -225,6 +225,12 @@
     position: absolute;
 }
 
+#projects {
+    .row {
+        align-items: center;
+    }
+}
+
 #about {
     .row {
         padding: 100px 0 30px;
