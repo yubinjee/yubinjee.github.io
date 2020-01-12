@@ -1,6 +1,31 @@
+@import "variables.scss";
+
+.yb_section-intro {
+    height: 100vh;
+    max-height: 900px;   
+}
+.yb_section-intro__headline{
+    margin-bottom: 24px;
+}
+.yb_section-intro__headline-grey {
+    color: $grey;
+}
+.yb_section-intro__headline-black {
+    color: $black;
+}
+.yb_section-intro__paragraph {
+    font-size: $fontSizeMedium;
+    color: $darkgrey;
+    line-height: 1.8;
+    b {
+        color: $black;
+    }
+}
+
+
 #intro {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    /*padding-top: 40px;
+    padding-bottom: 40px;*/
     .heading {
         margin-bottom: 20px;
         font-size: $headingTwo;
@@ -249,8 +274,8 @@
 @media (min-width: 768px) {
 
     #intro {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        /*padding-top: 100px;
+        padding-bottom: 100px;*/
         .heading {
             font-size: $headingOne;
         }

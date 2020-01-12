@@ -25,11 +25,11 @@ main {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     line-height: 1.25;
-    letter-spacing: 1px;
+    //letter-spacing: 1px;
 }
 h1 {
     font-size: $headingOne;
-    letter-spacing: 2px;
+    //letter-spacing: 2px;
 }
 h2 {
     font-size: $headingTwo;
@@ -166,15 +166,15 @@ z-index: 999;
 .yb_header-global__logo {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: $headingSix;
+    font-size: $fontSizeMedium;
     text-decoration: none;
     color: $black;
     transition: 0.4s;
     &:hover {
-        color: $grey;
+        color: $darkgrey;
     }
     span {
-        color: $grey;
+        color: $darkgrey;
         font-weight: normal;
         margin-left: $multiplier;
     }
@@ -207,9 +207,9 @@ z-index: 999;
     }
 }
 .yb_navigation-global__list-item__a {
-    padding: 8px 24px;
+    padding: 8px 16px;
     color: white;
-    font-size: $headingFour;
+    font-size: $headingFive;
     transition: $transitionFast;
     &:hover {
         color: #000;
@@ -232,8 +232,8 @@ z-index: 999;
         }
     }
     .yb_navigation-global__list-item__a {
-        font-size: $headingSix;
-        color: $grey;
+        font-size: $fontSizeMedium;
+        color: $darkgrey;
     }
 }
 

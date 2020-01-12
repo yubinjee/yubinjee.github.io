@@ -6,6 +6,7 @@ setTimeout
 
 var prevScrollpos = window.pageYOffset;
 var header = document.getElementById("myHeader");
+var main = document.getElementById("mainContent");
 
 function stickyHeader() {
 
@@ -18,11 +19,11 @@ function stickyHeader() {
 
         if (prevScrollpos > currentScrollPos) {
         header.classList.add("sticky");
-        //header.style.top = "0px";
+        main.style.marginTop = "0px";
         } 
         else {
         header.classList.remove("sticky");
-        //header.style.top = "-50px";
+        main.style.marginTop = "-80px";
         }
 
         prevScrollpos = currentScrollPos;
