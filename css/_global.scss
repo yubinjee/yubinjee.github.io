@@ -1,8 +1,12 @@
 @import "variables.scss";
 
-* {
-    font-family: 'Roboto', sans-serif;
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/inter/Inter-Regular.woff.woff') format('woff');
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,6 +14,9 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     height: 100%;
+    font-family: 'Inter', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 main {
     height: 100%;
