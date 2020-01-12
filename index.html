@@ -2,14 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>Yu Bin Jee, UI Designer based in Berlin</title>
+    <title>Yu Bin Jee - UI design portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Portfolio of Yu Bin Jee, UI Designer based in Berlin.">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="Description" content="I’m a UI designer based in Berlin and who loves building things that live on the internet.">
 
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Yu Bin Jee - UI design portfolio">
+    <meta property="og:description" content="I’m a UI designer based in Berlin and who loves building things that live on the internet.">
+    <meta property="og:image" content="assets/img/preview.png">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143261376-1"></script>
@@ -17,7 +26,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-143261376-1');
     </script>
 
@@ -25,36 +33,44 @@
 
 <body>
 
-    <header class="container header" id="myHeader">
+    <header class="yb_header" id="myHeader">
 
         <!-- Logo -->
-        <a href="#" class="logo" role="banner" title="Homepage">jeeee</a>
+        <a href="https://yubinjee.github.io/" class="yb_header-global__logo" title="Homepage">Yu Bin Jee<span>UI designer</span></a>
 
         <!-- Navigation -->
-        <nav class="navigation" role="navigation">
-
-            <ul class="navigation-menu">
-                <li>
-                    <a class="link navigation-link" href="#intro" title="Recent works">
-                        Work
+        <nav class="yb_navigation-global" role="navigation">
+            <ul class="yb_navigation-global__list">
+                <li class="yb_navigation-global__list-item">
+                    <a class="yb_navigation-global__list-item__a" href="https://yubinjee.github.io/" title="Homepage">
+                        Home
                     </a>
                 </li>
-                <li>
-                    <a class="link navigation-link" href="#about" title="About me">
+                <li class="yb_navigation-global__list-item">
+                    <a class="yb_navigation-global__list-item__a" href="#about" title="About me">
                         About
                     </a>
                 </li>
+                <li class="yb_navigation-global__list-item">
+                    <a class="yb_navigation-global__list-item__a" href="#intro" title="Recent projects">
+                        Work
+                    </a>
+                </li>
+                <li class="yb_navigation-global__list-item">
+                    <a class="yb_navigation-global__list-item__a" href="mailto:yubin.jee@gmail.com" title="Contact me">
+                        + Contact
+                    </a>
+                </li>
+                
             </ul>
+       </nav>
 
-            
-
-        </nav>
-
-        <div class="mobile-navigation">
-                <button role="button" aria-label="Open the navigation menu" class="icon--burger-menu" id="nav-menu-toggle"></button>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+        <div class="yb_navigation-mobile">
+            <div class="yb_navigation-mobile__line"></div>
+            <div class="yb_navigation-mobile__line"></div>
+            <button role="button" aria-label="Open and close the navigation menu" id="nav-menu-toggle"></button>
+                
+        </div>
 
     </header>
 

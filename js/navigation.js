@@ -18,11 +18,11 @@ function stickyHeader() {
 
         if (prevScrollpos > currentScrollPos) {
         header.classList.add("sticky");
-        header.style.top = "0px";
+        //header.style.top = "0px";
         } 
         else {
         header.classList.remove("sticky");
-        header.style.top = "-50px";
+        //header.style.top = "-50px";
         }
 
         prevScrollpos = currentScrollPos;
@@ -67,7 +67,7 @@ function showContent (event) {
 
 document.getElementById("nav-menu-toggle").addEventListener('click', toggleNavigation)
 
-var mobileNavigationLinks = document.getElementsByClassName('navigation-link');
+var mobileNavigationLinks = document.getElementsByClassName('yb_navigation-global__list-item__a');
 
 for (var i = 0; i < mobileNavigationLinks.length; i++) {
     mobileNavigationLinks[i].addEventListener('click', showContent);

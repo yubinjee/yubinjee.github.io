@@ -736,6 +736,14 @@
   clear: both;
 }
 */
+/*
+Material UI breakpoints
+xs, extra-small: 0px
+sm, small: 600px
+md, medium: 960px
+lg, large: 1280px
+xl, extra-large: 1920px
+*/
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -779,10 +787,10 @@ h5 {
   font-size: 18px; }
 
 h6 {
-  font-size: 18px; }
+  font-size: 16px; }
 
 a {
-  color: #333; }
+  color: #212121; }
 
 img {
   width: 100%; }
@@ -796,6 +804,9 @@ button {
   cursor: pointer; }
   button:focus {
     outline: none; }
+
+a {
+  text-decoration: none; }
 
 .link {
   text-decoration: none;
@@ -830,32 +841,28 @@ button {
       transform: translate(100%, -50%);
       opacity: 1;
       right: -5px; } }
-.header {
+.yb_header {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 80px;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
   /*position: fixed;
   width: 90%;
   background: white;
   z-index: 999;
-  box-shadow: 0 0px 3px 0px rgba(50, 50, 50, 0.17);*/
-  padding: 0 5%;
-  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  justify-content: space-between; }
-  .header .logo {
-    text-decoration: none;
-    font-size: 36px;
-    font-weight: 600;
-    color: black;
-    padding: 10px 20px 10px 0;
-    font-family: Helvetica, sans-serif;
-    transition: 0.4s; }
-    .header .logo:hover {
-      color: #D44040;
-      filter: brightness(2); }
+  box-shadow: 0 0px 3px 0px rgba(50, 50, 50, 0.17);*/ }
 
-@media (min-width: 768px) {
-  .header .logo {
-    padding: 10px;
-    font-size: 48px; } }
+/*
+@media (min-width: $breakpointSmall) {
+    .yb_header-global__logo {
+        padding: 10px;
+        font-size: $fontSizeLarge;
+    }   
+}
+*/
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
@@ -868,127 +875,119 @@ button {
   padding-top: 61px; }
 
 @media (min-width: 992px) {
-  .header {
-    padding: 0 10%; }
-
-  .sticky {
-    width: 80%; }
-
+  /*.sticky {
+      width: 80%;
+  }*/
   .sticky + .content {
     padding-top: 75px; } }
-.navigation {
-  display: flex;
+.yb_header-global__logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  color: #212121;
+  transition: 0.4s; }
+  .yb_header-global__logo:hover {
+    color: #7A7A7A; }
+  .yb_header-global__logo span {
+    color: #7A7A7A;
+    font-weight: normal;
+    margin-left: 8px; }
+
+.yb_navigation-global {
+  display: none;
   justify-content: flex-end;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 100%;
-  z-index: 100; }
+  bottom: 0px;
+  transition: 2s ease; }
 
-.navigation-menu {
+.yb_navigation-global__list {
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background: #f6f6f6;
-  width: 100%;
-  height: 0%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  overflow: hidden;
-  flex-direction: column;
   margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: scroll; }
-  .navigation-menu li {
-    padding-right: 0;
-    padding-bottom: 30px; }
-  .navigation-menu .link {
-    padding: 10px 20px;
-    color: #333;
-    font-size: 28px; }
-    .navigation-menu .link:before {
-      width: 0; }
+  padding: 0; }
 
-.mobile-navigation .icon--burger-menu {
+.yb_navigation-global__list-item {
+  padding-right: 0;
+  padding-bottom: 40px; }
+  .yb_navigation-global__list-item:last-child {
+    padding-right: 0; }
+
+.yb_navigation-global__list-item__a {
+  padding: 8px 24px;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .yb_navigation-global__list-item__a:hover {
+    color: #000; }
+
+@media (min-width: 960px) {
+  .yb_navigation-global {
+    display: block;
+    position: relative; }
+
+  .yb_navigation-mobile {
+    display: none; }
+
+  .yb_navigation-global__list-item {
+    padding-right: 40px;
+    padding-bottom: 0; }
+    .yb_navigation-global__list-item:first-child {
+      display: none; }
+
+  .yb_navigation-global__list-item__a {
+    font-size: 16px;
+    color: #7A7A7A; } }
+.yb_navigation-mobile button {
   opacity: 0;
   position: absolute;
   margin: 0;
-  transform: translate(-5px, -14px);
+  transform: translate(-5px, -22px);
   width: 40px;
   height: 40px;
-  z-index: 102; }
-.mobile-navigation .line {
+  z-index: 2; }
+
+.yb_navigation-mobile__line {
   width: 30px;
   height: 4px;
   margin-bottom: 6px;
   position: relative;
-  background: #333;
+  background: #212121;
   border-radius: 2px;
-  z-index: 101;
   transform-origin: 0% 0%;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
-  .mobile-navigation .line:last-of-type {
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  z-index: 1; }
+  .yb_navigation-mobile__line:last-of-type {
     margin-bottom: 0;
     width: 23px;
     float: right;
     transform-origin: 0% 100%; }
 
-.menu-is-open {
-  /*width: 100%;
+.menu-is-open .yb_navigation-global {
+  display: flex;
+  z-index: 1; }
+.menu-is-open .yb_navigation-global__list {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #212121;
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
   height: 100%;
-  position: fixed;
-  .navigation-menu {
-      height: 100vh;
-  }*/ }
-  .menu-is-open .navigation {
-    bottom: 0; }
-  .menu-is-open .line {
-    transform: rotate(45deg) translate(-2.5px, -10px);
-    margin-bottom: 0; }
-    .menu-is-open .line:last-of-type {
-      transform: rotate(-45deg) translate(-1.5px, 9px);
-      width: 30px; }
+  overflow: scroll; }
+.menu-is-open .yb_navigation-mobile__line {
+  transform: rotate(45deg) translate(-2.5px, -10px);
+  margin-bottom: 0;
+  background: white; }
+  .menu-is-open .yb_navigation-mobile__line:last-of-type {
+    transform: rotate(-45deg) translate(-1.5px, 9px);
+    width: 30px; }
 
-@media (min-width: 768px) {
-  .navigation {
-    position: relative; }
-
-  .navigation-menu {
-    justify-content: flex-end;
-    position: relative;
-    background: none;
-    top: none;
-    left: none;
-    flex-direction: row;
-    overflow: visible; }
-    .navigation-menu li {
-      padding-right: 40px;
-      padding-bottom: 0; }
-      .navigation-menu li:last-child {
-        padding-right: 0; }
-    .navigation-menu .link {
-      padding: 10px;
-      font-size: 20px; }
-      .navigation-menu .link:hover {
-        color: #D44040; }
-      .navigation-menu .link:before {
-        width: 0;
-        left: 50%;
-        transform: translate(-50%, -10px);
-        max-width: calc(100% - 20px); }
-      .navigation-menu .link:hover:before {
-        width: 100%; }
-      .navigation-menu .link:after {
-        opacity: 0; }
-
-  .mobile-navigation {
-    display: none; } }
 #intro {
   padding-top: 40px;
   padding-bottom: 40px; }
@@ -1055,14 +1054,14 @@ button {
     width: 120px;
     height: 200px;
     border-radius: 100px 100px 0 0;
-    background: #333; }
+    background: #212121; }
   .avatar-background .fringe {
     z-index: 99;
     top: 53px;
     left: 95px;
     width: 63px;
     height: 28px;
-    background: #333;
+    background: #212121;
     border-radius: 0 0 100px 100px;
     transform: rotate(30deg); }
     .avatar-background .fringe:before {
@@ -1072,7 +1071,7 @@ button {
       left: -20px;
       width: 47px;
       height: 30px;
-      background: #333;
+      background: #212121;
       border-radius: 100%;
       transform: rotate(-45deg); }
   .avatar-background .face {
@@ -1089,7 +1088,7 @@ button {
     left: 80px;
     width: 10px;
     height: 10px;
-    background: #333;
+    background: #212121;
     border-radius: 100%;
     animation-name: eyeblinking-left;
     animation-duration: 4s;
@@ -1100,7 +1099,7 @@ button {
       left: 50px;
       width: 10px;
       height: 10px;
-      background: #333;
+      background: #212121;
       border-radius: 100%;
       animation-name: eyeblinking-right;
       animation-duration: 4s;

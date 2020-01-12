@@ -1,6 +1,8 @@
 // color variables 
-$black: #333;
+$black: #212121;
 $red: /*#DA5E5E*/#D44040;
+$grey: #7A7A7A;
+$lightgrey: #f6f6f6;
 
 // font size variables 
 $fontSizeExtraLarge: 60px;
@@ -11,7 +13,7 @@ $headingTwo: 28px;
 $headingThree: 24px;
 $headingFour: 20px;
 $headingFive: 18px;
-$headingSix: 18px;
+$headingSix: 16px;
 
 $fontSizeMedium: 16px;
 $fontSizeSmall: 14px;
@@ -20,3 +22,21 @@ $fontSizeExtraSmall: 12px;
 //transform variables
 $transitionFast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+//breakpoints
+$breakpointExtraSmall: 0px;
+$breakpointSmall: 600px;
+$breakpointMedium: 960px;
+$breakpointLarge: 1280px;
+$breakpointExtraLarge: 1440px;
+/*
+Material UI breakpoints
+xs, extra-small: 0px
+sm, small: 600px
+md, medium: 960px
+lg, large: 1280px
+xl, extra-large: 1920px
+*/
+
+//multiplier
+$multiplier: 8px;

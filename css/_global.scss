@@ -57,7 +57,7 @@ img {
     width: 100%;
 }
 
-// reset the button style
+// resets the button style
 button {
     padding: 0;
     border: none;
@@ -68,6 +68,10 @@ button {
     &:focus {
         outline: none;
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 .link {
@@ -91,7 +95,6 @@ button {
 }
 
 @media (min-width: 768px) {
-
     .link {
         &:after {
             content: "→";
@@ -111,5 +114,184 @@ button {
             }
         }  
     }
+}
 
+///////////////////////////// HEADER /////////////////////////////
+
+.yb_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 80px;
+    transition: $transitionFast;
+    z-index: 1;
+    //sticky header styling start
+    /*position: fixed;
+    width: 90%;
+    background: white;
+    z-index: 999;
+    box-shadow: 0 0px 3px 0px rgba(50, 50, 50, 0.17);*/
+    //sticky header styling end
+}
+/*
+@media (min-width: $breakpointSmall) {
+    .yb_header-global__logo {
+        padding: 10px;
+        font-size: $fontSizeLarge;
+    }   
+}
+*/
+
+// sticky header
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+position: fixed;
+width: 90%;
+background: white;
+z-index: 999;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 61px;
+}
+@media (min-width: 992px) {
+    /*.sticky {
+        width: 80%;
+    }*/
+    .sticky + .content {
+        padding-top: 75px;
+    }
+}
+.yb_header-global__logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: $headingSix;
+    text-decoration: none;
+    color: $black;
+    transition: 0.4s;
+    &:hover {
+        color: $grey;
+    }
+    span {
+        color: $grey;
+        font-weight: normal;
+        margin-left: $multiplier;
+    }
+}
+
+
+
+///////////////////////////// NAVIGATION /////////////////////////////
+.yb_navigation-global {
+    display: none;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: 2s ease;
+}
+.yb_navigation-global__list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.yb_navigation-global__list-item {
+    padding-right: 0;
+    padding-bottom: 40px;
+    &:last-child {
+        padding-right: 0;
+    }
+}
+.yb_navigation-global__list-item__a {
+    padding: 8px 24px;
+    color: white;
+    font-size: $headingFour;
+    transition: $transitionFast;
+    &:hover {
+        color: #000;
+    }
+}
+//Hide mobile navigation on desktop
+@media (min-width: $breakpointMedium) {
+    .yb_navigation-global {
+        display: block;
+        position: relative;
+    }
+    .yb_navigation-mobile {
+        display: none;
+    }
+    .yb_navigation-global__list-item {
+        padding-right: 40px;
+        padding-bottom: 0;
+        &:first-child {
+            display: none;
+        }
+    }
+    .yb_navigation-global__list-item__a {
+        font-size: $headingSix;
+        color: $grey;
+    }
+}
+
+//Mobile navigation
+.yb_navigation-mobile {
+    button {
+        opacity: 0;
+        position: absolute;
+        margin: 0;
+        transform: translate(-5px, -22px);
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+    }      
+}
+.yb_navigation-mobile__line {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    position: relative;
+    background: $black;
+    border-radius: 2px;
+    transform-origin: 0% 0%;
+    transition: transform $transition, opacity 0.55s ease;
+    z-index: 1;
+    &:last-of-type {
+        margin-bottom: 0;
+        width: 23px;
+        float: right;
+        transform-origin: 0% 100%;
+    }
+}
+
+//when toggle the burger menu on mobile
+.menu-is-open {
+    .yb_navigation-global {
+        display: flex;
+        z-index: 1;
+    }
+    .yb_navigation-global__list {
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: $black;
+        width: 100%;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        height: 100%;
+        overflow: scroll;
+    }
+    .yb_navigation-mobile__line {
+        transform: rotate(45deg) translate(-2.5px, -10px);
+        margin-bottom: 0;
+        background: white;
+        &:last-of-type {
+            transform: rotate(-45deg) translate(-1.5px, 9px);
+            width: 30px;
+        }
+    }
 }
