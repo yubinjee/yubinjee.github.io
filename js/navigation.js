@@ -19,11 +19,11 @@ function stickyHeader() {
 
         if (prevScrollpos > currentScrollPos) {
         header.classList.add("sticky");
-        main.style.marginTop = "0px";
+        //main.style.marginTop = "0px";
         } 
         else {
         header.classList.remove("sticky");
-        main.style.marginTop = "-80px";
+        //main.style.marginTop = "-80px";
         }
 
         prevScrollpos = currentScrollPos;

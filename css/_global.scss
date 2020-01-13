@@ -16,16 +16,19 @@ body {
     height: 100%;
     font-family: 'Inter', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    color: $black;
 }
 main {
     height: 100%;
     overflow: auto;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6{
     margin: 0;
-    line-height: 1.25;
+    //line-height: 1.25;
     //letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
 }
 h1 {
     font-size: $headingOne;
@@ -49,6 +52,7 @@ h6 {
 }
 p {
     $fontSizeMedium: 16px;
+    margin:0;
 }
 a {
     color: $black;
@@ -119,13 +123,13 @@ a {
 ///////////////////////////// HEADER /////////////////////////////
 
 .yb_header {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
     height: 80px;
     transition: $transitionFast;
     z-index: 1;
+    margin: 0;
+    position: absolute;
+    width: 90%;
     //sticky header styling start
     /*position: fixed;
     width: 90%;
@@ -147,7 +151,6 @@ a {
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
 position: fixed;
-width: 90%;
 background: white;
 z-index: 999;
 }

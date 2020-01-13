@@ -1,39 +1,33 @@
 @import "variables.scss";
+@import "animation.scss";
 
+///////////////////////////// INTRO /////////////////////////////
 .yb_section-intro {
     height: 100vh;
-    max-height: 900px;   
+    max-height: 900px;
+    min-height: 700px;
 }
 .yb_section-intro__headline{
     margin-bottom: 24px;
+    font-size: $headingTwo;
+    font-weight: 400;
 }
 .yb_section-intro__headline-grey {
-    color: $grey;
+    //color: $grey;
 }
 .yb_section-intro__headline-black {
-    color: $black;
+    //color: $black;
+    font-weight: 600;
 }
 .yb_section-intro__paragraph {
     font-size: $fontSizeMedium;
-    color: $darkgrey;
+    //color: $darkgrey;
     line-height: 1.8;
     b {
         color: $black;
     }
 }
-
-
-#intro {
-    /*padding-top: 40px;
-    padding-bottom: 40px;*/
-    .heading {
-        margin-bottom: 20px;
-        font-size: $headingTwo;
-    }
-    .sub-heading {
-        font-weight: 400;
-    }
-}
+///////////////////////////// INTRO - Avatar /////////////////////////////
 .avatar-background {
     width: 200px;
     height: 200px;
@@ -53,22 +47,6 @@
     .cloud-group:nth-child(2){
         transform: translateX(-100%);
         animation-name: move-right-second;
-    }
-    @keyframes move-right-first {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {  
-            transform: translate(100%, 0);
-        }
-    }
-    @keyframes move-right-second {
-        0% {
-            transform: translate(-100%, 0);
-        }
-        100% {  
-            transform: translate(0, 0);
-        }
     }
     .cloud-item:nth-child(2) {
         transform: translate(70px, 30px) scale(0.8);
@@ -161,45 +139,7 @@
             animation-duration: 4s;
             animation-iteration-count: infinite;
         }
-    }
-    @keyframes eyeblinking-left {
-        0% {
-            height: 10px;
-            top: 100px;
-        }
-        90% {
-            height: 10px;
-            top: 100px;
-        }
-        95% {  
-            height: 2px;
-            top: 104px;
-            
-        }
-        100% {  
-            height: 10px;
-            top: 100px;
-        }
-    }
-    @keyframes eyeblinking-right {
-        0% {
-            height: 10px;
-
-        }
-        90% {
-            height: 10px;
-
-        }
-        95% {  
-            height: 2px;
-
-            
-        }
-        100% {  
-            height: 10px;
-
-        }
-    }
+    } 
     .nose {
         z-index: 20;
         top: 100px;
@@ -250,26 +190,71 @@
     position: absolute;
 }
 
+///////////////////////////// ABOUT /////////////////////////////
+.yb_section-about {
+    background: $lightgrey;
+    //color: white;
+    padding-top: 144px;
+    padding-bottom: 144px;
+    align-items: flex-start;
+}
+.yb_section-about__headline {
+    font-size: $headingSix;
+    //font-weight: 600;
+    margin-bottom: 40px;
+    color: $darkgrey;
+    position: relative;
+    &:before {
+        content: '';
+        background-color: $darkgrey;
+        height: 1px;
+        margin-bottom: auto;
+        margin-top: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -4rem;
+        width: 2.5rem;
+    }
+}
+.yb_section-about__paragraph {
+    font-size: $headingFour;
+    margin-bottom: 80px;
+}
+.yb_section-about__button {
+   //color: #ff6b63;
+    display: inline-block;
+    margin-top: 40px;
+    //font-size: $headingSix;
+    font-weight: 600;
+    /*color: $red;
+    font-weight: 600;
+    font-size: $headingFive;
+    position: relative;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: $red;
+        position: absolute;
+        bottom: -16%;
+    }*/
+}
+
+.yb_section-about__experience {
+    //font-size: $headingSix;
+    margin-bottom: 24px;
+    font-family: 'Work Sans';
+}
+.yb_section-about__experience__headline {
+    //font-weight: 600;
+}
+
 #projects {
     .row {
         align-items: center;
     }
 }
-
-#about {
-    .row {
-        padding: 100px 0 30px;
-    }
-
-    h3 {
-        margin-bottom: 30px;
-    }
-
-    p {
-        font-size: $headingThree;
-    }
-}
-
 
 @media (min-width: 768px) {
 
