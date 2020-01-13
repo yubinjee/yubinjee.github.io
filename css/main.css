@@ -721,16 +721,55 @@ md, medium: 960px
 lg, large: 1280px
 xl, extra-large: 1920px
 */
+@keyframes move-right-first {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(100%, 0); } }
+@keyframes move-right-second {
+  0% {
+    transform: translate(-100%, 0); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes eyeblinking-left {
+  0% {
+    height: 10px;
+    top: 100px; }
+  90% {
+    height: 10px;
+    top: 100px; }
+  95% {
+    height: 2px;
+    top: 104px; }
+  100% {
+    height: 10px;
+    top: 100px; } }
+@keyframes eyeblinking-right {
+  0% {
+    height: 10px; }
+  90% {
+    height: 10px; }
+  95% {
+    height: 2px; }
+  100% {
+    height: 10px; } }
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33); }
+  80%, 100% {
+    opacity: 0; } }
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.9); } }
 @font-face {
   font-family: 'Inter Regular';
   font-style: normal;
   font-weight: normal;
   src: url("/assets/fonts/inter/Inter-Regular.woff.woff") format("woff"); }
-@font-face {
-  font-family: 'Inter Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: url("/assets/fonts/inter/Inter-Medium.woff.woff") format("woff"); }
 html {
   scroll-behavior: smooth; }
 
@@ -799,9 +838,45 @@ button {
   display: inline-block;
   font-weight: 600;
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 8px 8px 8px 0; }
-  .yb_button:hover {
-    color: #7A7A7A; }
+  padding: 8px 8px 8px 0;
+  position: relative;
+  padding-left: 32px; }
+  .yb_button:hover .pulsating-circle:before {
+    display: block; }
+  .yb_button:hover .pulsating-circle:after {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite; }
+
+.pulsating-circle {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateX(0%) translateY(-50%);
+  width: 16px;
+  height: 16px; }
+  .pulsating-circle:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    background-color: #C4C4C4;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    display: none; }
+  .pulsating-circle:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    border-radius: 15px; }
 
 .yb_section-headline {
   font-size: 18px;
@@ -851,9 +926,12 @@ button {
   }*/
   .sticky + .content {
     padding-top: 75px; } }
-.yb_header-global__logo span {
-  color: #7A7A7A;
-  margin-left: 8px; }
+.yb_header-global__logo {
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 8px 8px 8px 0; }
+  .yb_header-global__logo span {
+    color: #7A7A7A;
+    margin-left: 8px; }
 
 .yb_navigation-global {
   display: none;
@@ -993,11 +1071,18 @@ xl, extra-large: 1920px
     height: 2px; }
   100% {
     height: 10px; } }
-@font-face {
-  font-family: 'Inter Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../assets/fonts/inter/Inter-Medium.woff") format("woff"); }
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33); }
+  80%, 100% {
+    opacity: 0; } }
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.9); } }
 .yb_section-intro {
   height: 100vh;
   max-height: 900px;
@@ -1185,7 +1270,8 @@ xl, extra-large: 1920px
   background: #f6f6f6;
   padding-top: 144px;
   padding-bottom: 144px;
-  align-items: flex-start; }
+  align-items: flex-start;
+  margin-bottom: 144px; }
 
 .yb_section-about__paragraph {
   font-size: 24px;
@@ -1201,8 +1287,7 @@ xl, extra-large: 1920px
   margin-bottom: 2px; }
 
 .yb_section-work {
-  padding-top: 144px;
-  padding-bottom: 144px;
+  margin-bottom: 200px;
   justify-content: flex-start; }
 
 .yb_section-work__project {
@@ -1261,21 +1346,18 @@ xl, extra-large: 1920px
 .yb_section-contact {
   flex-direction: column; }
   .yb_section-contact hr {
-    margin-bottom: 40px; }
+    margin-bottom: 80px; }
 
 .yb_section-contact__headline {
   font-size: 18px;
-  margin-bottom: 40px; }
+  margin-bottom: 32px;
+  margin-top: 104px; }
 
 .yb_section-contact__paragraph {
-  font-size: 28px;
-  font-family: 'Inter Medium';
-  letter-spacing: -0.5px;
+  font-size: 36px;
   margin-bottom: 104px; }
 
 .yb_section-contact__button {
-  font-size: 24px;
-  color: #ff4040;
   font-weight: 600; }
 
 /*# sourceMappingURL=main.css.map */

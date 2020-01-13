@@ -1,13 +1,6 @@
 @import "variables.scss";
 @import "animation.scss";
 
-@font-face {
-    font-family: 'Inter Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../assets/fonts/inter/Inter-Medium.woff') format('woff');
-}
-
 ///////////////////////////// INTRO /////////////////////////////
 .yb_section-intro {
     height: 100vh;
@@ -231,6 +224,7 @@
     padding-top: 144px;
     padding-bottom: 144px;
     align-items: flex-start;
+    margin-bottom: 144px;
 }
 .yb_section-about__paragraph {
     font-size: $headingFour;
@@ -249,8 +243,7 @@
 
 ///////////////////////////// Work /////////////////////////////
 .yb_section-work {
-    padding-top: 144px;
-    padding-bottom: 144px;
+    margin-bottom: 200px;
     justify-content: flex-start;
 }
 .yb_section-work__project {
@@ -319,21 +312,20 @@
 .yb_section-contact {
     flex-direction: column;
     hr {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
     }
 }
 .yb_section-contact__headline {
     font-size: $headingSix;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    margin-top: 104px;
 }
 .yb_section-contact__paragraph {
-    font-size: $headingThree;
-    font-family: 'Inter Medium';
-    letter-spacing: -0.5px;
+    font-size: $headingTwo;
     margin-bottom: 104px;
 }
 .yb_section-contact__button {
-    font-size: $headingFour;
-    color: $red;
+    //font-size: $headingFour;
+    //color: $red;
     font-weight: 600;
 }

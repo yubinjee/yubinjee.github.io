@@ -1,17 +1,11 @@
 @import "variables.scss";
+@import "animation.scss";
 
 @font-face {
     font-family: 'Inter Regular';
     font-style: normal;
     font-weight: normal;
     src: url('/assets/fonts/inter/Inter-Regular.woff.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Inter Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/assets/fonts/inter/Inter-Medium.woff.woff') format('woff');
 }
 
 html {
@@ -89,10 +83,53 @@ button {
     font-weight: 600;
     transition: $transitionFast;
     padding: 8px 8px 8px 0;
+    position: relative;
+    padding-left: 32px;
     &:hover {
-        color: $darkgrey;
-    }
+        .pulsating-circle {
+            &:before {
+                display: block;
+            }
+            &:after {
+                box-shadow: 0 0 8px rgba(0,0,0,.3);
+                animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+            }
+        }
+    }    
 }
+.pulsating-circle {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateX(-0%) translateY(-50%);
+    width: 16px;
+    height: 16px;   
+    &:before {
+      content: '';
+      position: relative;
+      display: block;
+      width: 300%;
+      height: 300%;
+      box-sizing: border-box;
+      margin-left: -100%;
+      margin-top: -100%;
+      border-radius: 45px;
+      background-color: $grey;
+      animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      display: none;
+    }  
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0; 
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      border-radius: 15px;
+    }
+  }
 .yb_section-headline {
     font-size: $headingSix;
     font-weight: 500;
@@ -150,6 +187,8 @@ z-index: 999;
     }
 }
 .yb_header-global__logo {
+    transition: $transitionFast;
+    padding: 8px 8px 8px 0;
     span {
         color: $darkgrey;
         margin-left: 8px;
