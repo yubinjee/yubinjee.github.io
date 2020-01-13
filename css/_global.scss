@@ -64,11 +64,14 @@ p {
 }
 a {
     color: $black;
+    text-decoration: none;
 }
 img {
     width: 100%;
 }
-
+strong {
+    font-weight: normal;
+}
 // resets the button style
 button {
     padding: 0;
@@ -81,55 +84,36 @@ button {
         outline: none;
     }
 }
-
-a {
-    text-decoration: none;
-}
-
-.link {
-    text-decoration: none;
-    color: $red;
-    font-size: $headingFour;
-    letter-spacing: 1px;
-    font-weight: 500;
+.yb_button {
+    display: inline-block;
+    font-weight: 600;
     transition: $transitionFast;
-    position: relative;
-    &:before {
-        content: "";
-        background-color: $red;
-        width: 100%;
-        height: 3px;
-        position: absolute;
-        z-index: -1;
-        bottom: -5px;
-        transition: $transitionFast;
+    padding: 8px 8px 8px 0;
+    &:hover {
+        color: $darkgrey;
     }
 }
-
-@media (min-width: 768px) {
-    .link {
-        &:after {
-            content: "→";
-            position: absolute;
-            transition: $transitionFast;
-            right: 0;
-            opacity: 0;
-            top: 50%;
-            transform: translate(0,-50%);
-        }
-        &:hover {
-            filter: brightness(2);
-            &:after {
-                transform: translate(100%,-50%);
-                opacity: 1;
-                right: -5px;
-            }
-        }  
+.yb_section-headline {
+    font-size: $headingSix;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: $darkgrey;
+    position: relative;
+    &:before {
+        content: '';
+        background-color: $darkgrey;
+        height: 1px;
+        margin-bottom: auto;
+        margin-top: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -4rem;
+        width: 2.5rem;
     }
 }
 
 ///////////////////////////// HEADER /////////////////////////////
-
 .yb_header {
     justify-content: space-between;
     height: 80px;
@@ -146,15 +130,6 @@ a {
     box-shadow: 0 0px 3px 0px rgba(50, 50, 50, 0.17);*/
     //sticky header styling end
 }
-/*
-@media (min-width: $breakpointSmall) {
-    .yb_header-global__logo {
-        padding: 10px;
-        font-size: $fontSizeLarge;
-    }   
-}
-*/
-
 // sticky header
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
@@ -177,12 +152,9 @@ z-index: 999;
 .yb_header-global__logo {
     span {
         color: $darkgrey;
-        font-weight: normal;
         margin-left: 8px;
     }
 }
-
-
 
 ///////////////////////////// NAVIGATION /////////////////////////////
 .yb_navigation-global {
@@ -238,7 +210,6 @@ z-index: 999;
         color: $darkgrey;
     }
 }
-
 //Mobile navigation
 .yb_navigation-mobile {
     button {
@@ -268,7 +239,6 @@ z-index: 999;
         transform-origin: 0% 100%;
     }
 }
-
 //when toggle the burger menu on mobile
 .menu-is-open {
     .yb_navigation-global {
@@ -298,32 +268,9 @@ z-index: 999;
     }
 }
 
-.yb_button {
-    display: inline-block;
-    font-weight: 600;
-    transition: $transitionFast;
-    padding: 8px 8px 8px 0;
-    &:hover {
-        color: $darkgrey;
-    }
-}
+///////////////////////////// FOOTER /////////////////////////////
 
-.yb_section-headline {
-    font-size: $headingSix;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: $darkgrey;
-    position: relative;
-    &:before {
-        content: '';
-        background-color: $darkgrey;
-        height: 1px;
-        margin-bottom: auto;
-        margin-top: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -4rem;
-        width: 2.5rem;
-    }
+.yb_footer-global {
+    margin-top: 200px;
+    justify-content: space-between;
 }
