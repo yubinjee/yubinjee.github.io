@@ -1,10 +1,17 @@
 @import "variables.scss";
 
 @font-face {
-    font-family: 'Inter';
+    font-family: 'Inter Regular';
     font-style: normal;
     font-weight: normal;
     src: url('/assets/fonts/inter/Inter-Regular.woff.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/inter/Inter-Medium.woff.woff') format('woff');
 }
 
 html {
@@ -14,7 +21,7 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     height: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Regular', sans-serif;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
@@ -30,7 +37,6 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
     //line-height: 1.25;
     //letter-spacing: 1px;
-    font-family: 'Inter', sans-serif;
 }
 h1 {
     font-size: $headingOne;
@@ -299,5 +305,25 @@ z-index: 999;
     padding: 8px 8px 8px 0;
     &:hover {
         color: $darkgrey;
+    }
+}
+
+.yb_section-headline {
+    font-size: $headingSix;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: $darkgrey;
+    position: relative;
+    &:before {
+        content: '';
+        background-color: $darkgrey;
+        height: 1px;
+        margin-bottom: auto;
+        margin-top: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -4rem;
+        width: 2.5rem;
     }
 }

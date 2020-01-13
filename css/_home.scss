@@ -1,6 +1,13 @@
 @import "variables.scss";
 @import "animation.scss";
 
+@font-face {
+    font-family: 'Inter Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/inter/Inter-Medium.woff') format('woff');
+}
+
 ///////////////////////////// INTRO /////////////////////////////
 .yb_section-intro {
     height: 100vh;
@@ -210,6 +217,13 @@
 .clouds, .cloud, .avatar, .hair, .fringe, .face, .eye, .nose, .mouth, .neck, .body {
     position: absolute;
 }
+@media (min-width: $breakpointSmall) {
+    .avatar-background {
+        transform: none;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+}
 
 ///////////////////////////// ABOUT /////////////////////////////
 .yb_section-about {
@@ -217,25 +231,6 @@
     padding-top: 144px;
     padding-bottom: 144px;
     align-items: flex-start;
-}
-.yb_section-about__headline {
-    font-size: $headingSix;
-    margin-bottom: 40px;
-    color: $darkgrey;
-    position: relative;
-    font-weight: 500;
-    &:before {
-        content: '';
-        background-color: $darkgrey;
-        height: 1px;
-        margin-bottom: auto;
-        margin-top: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -4rem;
-        width: 2.5rem;
-    }
 }
 .yb_section-about__paragraph {
     font-size: $headingFour;
@@ -258,27 +253,11 @@
     padding-bottom: 144px;
     justify-content: flex-start;
 }
-.yb_section-work__headline {
-    font-size: $headingSix;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: $darkgrey;
-    position: relative;
-    &:before {
-        content: '';
-        background-color: $darkgrey;
-        height: 1px;
-        margin-bottom: auto;
-        margin-top: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -4rem;
-        width: 2.5rem;
-    }
-}
 .yb_section-work__project {
     margin-bottom: 144px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .yb_section-work__project-img-container {
     height: 480px;
@@ -288,7 +267,8 @@
     overflow: hidden;
 }
 .yb_section-work__project-img {
-    transition: ease 0.6s;
+    transition: ease 1s;
+    position: absolute;
 }
 .yb_section-work__project-img-link {
     position: absolute;
@@ -300,13 +280,16 @@
     justify-content: center;
     &:hover {
         .yb_section-work__project-img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
     }
 }
 #loveco {
     .yb_section-work__project-img-container {
         order:2;
+    }
+    .yb_section-work__project-text-container {
+        //padding: 0;
     }
     /*.yb_section-work__project-img {
         width: 160px;
@@ -331,19 +314,24 @@
 .yb_section-work__project-button {
     margin-top: 80px;
 }
-@media (min-width: 768px) {
-
-    #intro {
-        /*padding-top: 100px;
-        padding-bottom: 100px;*/
-        .heading {
-            font-size: $headingOne;
-        }
-    }
-    .avatar-background {
-        transform: none;
+.yb_section-contact {
+    flex-direction: column;
+    hr {
         margin-bottom: 40px;
-        margin-left: 0;
     }
-
+}
+.yb_section-contact__headline {
+    font-size: $headingSix;
+    margin-bottom: 40px;
+}
+.yb_section-contact__paragraph {
+    font-size: $headingThree;
+    font-family: 'Inter Medium';
+    letter-spacing: -0.5px;
+    margin-bottom: 104px;
+}
+.yb_section-contact__button {
+    font-size: $headingFour;
+    color: $red;
+    font-weight: 600;
 }

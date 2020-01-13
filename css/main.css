@@ -723,10 +723,15 @@ lg, large: 1280px
 xl, extra-large: 1920px
 */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Inter Regular';
   font-style: normal;
   font-weight: normal;
   src: url("/assets/fonts/inter/Inter-Regular.woff.woff") format("woff"); }
+@font-face {
+  font-family: 'Inter Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/inter/Inter-Medium.woff.woff") format("woff"); }
 html {
   scroll-behavior: smooth; }
 
@@ -734,7 +739,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
@@ -747,8 +752,7 @@ main {
   margin: auto; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: 'Inter', sans-serif; }
+  margin: 0; }
 
 h1 {
   font-size: 48px; }
@@ -969,6 +973,24 @@ a {
   .yb_button:hover {
     color: #7A7A7A; }
 
+.yb_section-headline {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #7A7A7A;
+  position: relative; }
+  .yb_section-headline:before {
+    content: '';
+    background-color: #7A7A7A;
+    height: 1px;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4rem;
+    width: 2.5rem; }
+
 /*
 Material UI breakpoints
 xs, extra-small: 0px
@@ -1009,6 +1031,11 @@ xl, extra-large: 1920px
     height: 2px; }
   100% {
     height: 10px; } }
+@font-face {
+  font-family: 'Inter Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/inter/Inter-Medium.woff") format("woff"); }
 .yb_section-intro {
   height: 100vh;
   max-height: 900px;
@@ -1187,29 +1214,16 @@ xl, extra-large: 1920px
 .clouds, .cloud, .avatar, .hair, .fringe, .face, .eye, .nose, .mouth, .neck, .body {
   position: absolute; }
 
+@media (min-width: 600px) {
+  .avatar-background {
+    transform: none;
+    margin-bottom: 40px;
+    margin-left: 0; } }
 .yb_section-about {
   background: #f6f6f6;
   padding-top: 144px;
   padding-bottom: 144px;
   align-items: flex-start; }
-
-.yb_section-about__headline {
-  font-size: 18px;
-  margin-bottom: 40px;
-  color: #7A7A7A;
-  position: relative;
-  font-weight: 500; }
-  .yb_section-about__headline:before {
-    content: '';
-    background-color: #7A7A7A;
-    height: 1px;
-    margin-bottom: auto;
-    margin-top: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -4rem;
-    width: 2.5rem; }
 
 .yb_section-about__paragraph {
   font-size: 24px;
@@ -1229,26 +1243,10 @@ xl, extra-large: 1920px
   padding-bottom: 144px;
   justify-content: flex-start; }
 
-.yb_section-work__headline {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 40px;
-  color: #7A7A7A;
-  position: relative; }
-  .yb_section-work__headline:before {
-    content: '';
-    background-color: #7A7A7A;
-    height: 1px;
-    margin-bottom: auto;
-    margin-top: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -4rem;
-    width: 2.5rem; }
-
 .yb_section-work__project {
   margin-bottom: 144px; }
+  .yb_section-work__project:last-child {
+    margin-bottom: 0; }
 
 .yb_section-work__project-img-container {
   height: 480px;
@@ -1258,7 +1256,8 @@ xl, extra-large: 1920px
   overflow: hidden; }
 
 .yb_section-work__project-img {
-  transition: ease 0.6s; }
+  transition: ease 1s;
+  position: absolute; }
 
 .yb_section-work__project-img-link {
   position: absolute;
@@ -1269,7 +1268,7 @@ xl, extra-large: 1920px
   align-items: center;
   justify-content: center; }
   .yb_section-work__project-img-link:hover .yb_section-work__project-img {
-    transform: scale(1.05); }
+    transform: scale(1.08); }
 
 #loveco {
   /*.yb_section-work__project-img {
@@ -1297,17 +1296,26 @@ xl, extra-large: 1920px
 .yb_section-work__project-button {
   margin-top: 80px; }
 
-@media (min-width: 768px) {
-  #intro {
-    /*padding-top: 100px;
-    padding-bottom: 100px;*/ }
-    #intro .heading {
-      font-size: 48px; }
+.yb_section-contact {
+  flex-direction: column; }
+  .yb_section-contact hr {
+    margin-bottom: 40px; }
 
-  .avatar-background {
-    transform: none;
-    margin-bottom: 40px;
-    margin-left: 0; } }
+.yb_section-contact__headline {
+  font-size: 18px;
+  margin-bottom: 40px; }
+
+.yb_section-contact__paragraph {
+  font-size: 28px;
+  font-family: 'Inter Medium';
+  letter-spacing: -0.5px;
+  margin-bottom: 104px; }
+
+.yb_section-contact__button {
+  font-size: 24px;
+  color: #ff4040;
+  font-weight: 600; }
+
 #footer {
   padding-top: 100px;
   padding-bottom: 100px;
