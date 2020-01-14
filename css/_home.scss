@@ -28,6 +28,7 @@
 }
 @media (min-width: $breakpointMedium) {
     .yb_section-intro {
+        padding: 0 5%;
         height: 100vh;
         max-height: 900px;
         min-height: 700px;
@@ -232,17 +233,54 @@
 }
 .yb_section-about__experience {
     margin-bottom: 24px;
-    //font-family: 'Work Sans';
 }
 .yb_section-about__experience__headline {
     margin-bottom: 2px;
+}
+@media (min-width: $breakpointSmall) {
+    .yb_section-about {
+        justify-content: center;
+    }
+    .yb_section-about__experience-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .yb_section-about__experience {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .yb_section-about__experience__headline {
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-transform: lowercase;
+    }
+    .yb_section-about__experience__year, .yb_section-about__experience__role {
+        font-size: $headingFour;
+    }
 }
 @media (min-width: $breakpointMedium) {
     .yb_section-about {
         padding-top: 144px;
         padding-bottom: 144px;
-        margin-bottom: 144px;
-        justify-content: center;
+        //margin-bottom: 144px;
+        justify-content: center;   
+    }
+    .yb_section-about__paragraph {
+        margin-bottom: 0;
+    }
+    .yb_section-about__experience-container {
+        display: block;
+    }
+    .yb_section-about__experience {
+        width: 100%;
+    }
+    .yb_section-about__experience__headline {
+        font-size: $fontSizeMedium;
+        text-transform: none;
+        margin-bottom: 2px;
+    }
+    .yb_section-about__experience__year, .yb_section-about__experience__role {
+        font-size: $fontSizeMedium;
     }
 }
 ///////////////////////////// Work /////////////////////////////
@@ -327,15 +365,24 @@
         }
     }
 }
+@media (min-width: $breakpointSmall) {
+    .yb_section-work__project-text-container {
+        padding-left: 10px;
+    }
+    .yb_section-work__project-img-container {
+        height: 400px;
+    }
+}
 @media (min-width: $breakpointMedium) {
     .yb_section-work {
         margin-bottom: 200px;
+        padding-top: 144px;
     }
     .yb_section-work__project {
         margin-bottom: 144px;
     }
     .yb_section-work__project-img-container {
-        height: 560px;
+        height: 440px;
         margin-bottom: 0;
     }
     .yb_section-work__project-button {
@@ -348,8 +395,13 @@
     }
     #loveco {
         .yb_section-work__project-img-container {
-            order:2;
+            order: 2;
         }
+    }
+}
+@media (min-width: $breakpointLarge) {
+    .yb_section-work__project-img-container {
+        height: 560px;
     }
 }
 

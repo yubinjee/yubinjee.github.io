@@ -151,7 +151,7 @@ button {
         width: 2.5rem;
     }
 }
-@media (min-width: $breakpointSmall) {
+@media (min-width: $breakpointMedium) {
     .yb_section-headline {
         margin-left: 0;
     }
@@ -163,9 +163,10 @@ button {
     height: 80px;
     transition: $transitionFast;
     z-index: 10;
-    margin: 0;
+    //margin: 0;
     position: absolute;
     width: 90%;
+    margin: 0;
     //sticky header styling start
     /*position: fixed;
     width: 90%;
@@ -205,36 +206,30 @@ z-index: 999;
 
 ///////////////////////////// NAVIGATION /////////////////////////////
 .yb_navigation-global {
-    opacity: 0;
     background: white;
-    //justify-content: flex-end;
     position: fixed;
     top: 0px;
     left: 0px;
-    right: 0px;
-    bottom: 0px;
+    width: 100%;
+    height: 0;
     transition: $transitionFast;
 }
 .yb_navigation-global__list {
     list-style-type: none;
-    //display: flex;
     margin: 0;
     padding: 0;
-    //justify-content: center;
-    //align-items: center;
-    position: absolute;
-    //background: $lightgrey;
-    width: 100%;
-    height: 100%;
-    //top: 0;
-    //left: 0;
-    flex-direction: column;
-    //overflow: scroll;
-    //transition: $transition;
+    display: none;
+    //position: absolute;
+    //width: 100%;
+    //height: 0%;
 }
 .yb_navigation-global__list-item {
+    //position: absolute;
+    //width: 100%;
+    //height: 0%;
     padding-right: 0;
     padding-bottom: 16px;
+    //display: none;
     &:first-child {
         margin-top: 160px;
     }
@@ -246,42 +241,12 @@ z-index: 999;
     }
 }
 .yb_navigation-global__list-item__a {
-    padding: 10px 10%;
-    //color: white;
     display: inline-block;
     font-size: $headingFive;
+    font-weight: 500;
+    color: $black;
     transition: $transitionFast;
-    &:hover {
-        color: #000;
-    }
-}
-//Hide mobile navigation on desktop
-@media (min-width: $breakpointSmall) {
-    .yb_navigation-global {
-        display: block;
-        position: relative;
-        justify-content: flex-end;
-    }
-    .yb_navigation-mobile {
-        display: none;
-    }
-    .yb_navigation-global__list {
-        margin-right: -40px;
-    }
-    .yb_navigation-global__list-item {
-        padding-right: 24px;
-        padding-bottom: 0;
-        &:first-child {
-            display: none;
-        }
-        &:last-child {
-            display: none;
-        }
-    }
-    .yb_navigation-global__list-item__a {
-        font-size: $fontSizeMedium;
-        color: $darkgrey;
-    }
+    padding: 10px 10%;
 }
 //Mobile navigation
 .yb_navigation-mobile {
@@ -316,12 +281,17 @@ z-index: 999;
 .menu-is-open {
     .yb_navigation-global {
         //display: block;
-        opacity: 1;
+        //opacity: 1;
+        height: 100%;
         z-index: 1;
    }
     .yb_navigation-global__list {    
-        height: 100%;
+        //height: 100%;
+        display: block;
     }
+    /*.yb_navigation-global__list-item {    
+        display: block;
+    }*/
     .yb_navigation-mobile__line {
         transform: rotate(45deg) translate(-2.5px, -10px);
         margin-bottom: 0;
@@ -329,6 +299,41 @@ z-index: 999;
         &:last-of-type {
             transform: rotate(-45deg) translate(-1.5px, 9px);
             width: 30px;
+        }
+    }
+}
+@media (min-width: $breakpointSmall) {
+    .yb_navigation-global {
+        position: relative;
+        //justify-content: flex-end;
+        opacity: 1;
+        background: none;
+    }
+    .yb_navigation-mobile {
+        display: none;
+    }
+    .yb_navigation-global__list {
+        margin-right: -40px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .yb_navigation-global__list-item {
+        padding-right: 24px;
+        padding-bottom: 0;
+        &:first-child {
+            display: none;
+        }
+        &:last-child {
+            display: none;
+        }
+    }
+    .yb_navigation-global__list-item__a {
+        font-size: $fontSizeMedium;
+        color: $darkgrey;
+        padding: 8px 16px;
+        &:hover {
+            color: #000;
         }
     }
 }
@@ -353,7 +358,7 @@ z-index: 999;
 .yb_footer-global__navigation-item {
     display: none;
 }
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmall) {
     .yb_footer-global {
         justify-content: space-between;
         align-items: center;
@@ -376,6 +381,7 @@ z-index: 999;
         font-size: $fontSizeMedium;
         color: $darkgrey;
         transition: $transitionFast;
+        text-align: right;
         &:hover {
             color: #000;
         }
