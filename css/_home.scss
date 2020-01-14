@@ -266,7 +266,7 @@
     justify-content: flex-start;
 }
 .yb_section-work__project {
-    margin-bottom: 80px;
+    margin-bottom: 104px;
     &:last-child {
         margin-bottom: 0;
     }
@@ -318,7 +318,7 @@
     line-height: 1.25;
 }
 .yb_section-work__project-button {
-    margin-top: 64px;
+    margin-top: 56px;
 }
 .yb_section-work__project-link {
     &:hover {
@@ -375,12 +375,9 @@
     margin-bottom: 32px;
     margin-top: 104px;
 }
-.yb_footer-global__text-container {
-    margin-bottom: 40px;
-}
 .yb_section-contact__paragraph {
     font-size: $headingTwo;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 }
 .yb_section-contact__button {
     //font-size: $headingFour;

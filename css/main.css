@@ -979,6 +979,8 @@ button {
     padding-bottom: 0; }
     .yb_navigation-global__list-item:first-child {
       display: none; }
+    .yb_navigation-global__list-item:last-child {
+      display: none; }
 
   .yb_navigation-global__list-item__a {
     font-size: 16px;
@@ -1034,8 +1036,10 @@ button {
   margin-top: 200px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 24px; }
+  align-items: flex-start; }
+
+.yb_footer-global__text-container {
+  margin-bottom: 24px; }
 
 .yb_footer-global__paragraph {
   font-weight: 600;
@@ -1045,30 +1049,33 @@ button {
   color: #7A7A7A; }
 
 .yb_footer-global__navigation-item {
-  padding: 8px 16px;
-  font-size: 16px;
-  color: #7A7A7A;
-  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding-left: 10px; }
-  .yb_footer-global__navigation-item:hover {
-    color: #000; }
+  display: none; }
 
 @media (min-width: 960px) {
   .yb_footer-global {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    height: 80px;
-    padding-bottom: 0; }
+    height: 80px; }
 
   .yb_footer-global__text-container {
-    display: flex; }
+    display: flex;
+    margin-bottom: 0; }
 
   .yb_footer-global__paragraph {
     margin-bottom: 0; }
 
   .yb_footer-global__copyright-note {
-    padding-left: 16px; } }
+    padding-left: 16px; }
+
+  .yb_footer-global__navigation-item {
+    display: block;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #7A7A7A;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .yb_footer-global__navigation-item:hover {
+      color: #000; } }
 /*
 Material UI breakpoints
 xs, extra-small: 0px
@@ -1343,7 +1350,7 @@ xl, extra-large: 1920px
   justify-content: flex-start; }
 
 .yb_section-work__project {
-  margin-bottom: 80px; }
+  margin-bottom: 104px; }
   .yb_section-work__project:last-child {
     margin-bottom: 0; }
 
@@ -1391,7 +1398,7 @@ xl, extra-large: 1920px
   line-height: 1.25; }
 
 .yb_section-work__project-button {
-  margin-top: 64px; }
+  margin-top: 56px; }
 
 .yb_section-work__project-link:hover .yb_button .pulsating-circle:before {
   display: block; }
@@ -1429,12 +1436,9 @@ xl, extra-large: 1920px
   margin-bottom: 32px;
   margin-top: 104px; }
 
-.yb_footer-global__text-container {
-  margin-bottom: 40px; }
-
 .yb_section-contact__paragraph {
   font-size: 36px;
-  margin-bottom: 80px; }
+  margin-bottom: 64px; }
 
 .yb_section-contact__button {
   font-weight: 600; }
