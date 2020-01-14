@@ -44,6 +44,7 @@
     border-radius: 100%;
     position: relative;
     overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black); //Solution for Overflow: hidden with border radius not working on Safari
     transform: scale(0.7);
     &:before {
         content: "This is pure CSS magic. Isn't it amazing?";

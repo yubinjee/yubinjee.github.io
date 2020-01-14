@@ -1212,6 +1212,7 @@ xl, extra-large: 1920px
   border-radius: 100%;
   position: relative;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   transform: scale(0.7); }
   .avatar-background:before {
     content: "This is pure CSS magic. Isn't it amazing?";
