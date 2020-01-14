@@ -114,7 +114,8 @@ button {
       margin-left: -100%;
       margin-top: -100%;
       border-radius: 45px;
-      background-color: $grey;
+      //background-color: $grey;
+      background-color: $blue;
       animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       display: none;
     }  
@@ -136,6 +137,7 @@ button {
     margin-bottom: 40px;
     color: $darkgrey;
     position: relative;
+    margin-left: 64px;
     &:before {
         content: '';
         background-color: $darkgrey;
@@ -147,6 +149,11 @@ button {
         bottom: 0;
         left: -4rem;
         width: 2.5rem;
+    }
+}
+@media (min-width: $breakpointSmall) {
+    .yb_section-headline {
+        margin-left: 0;
     }
 }
 
@@ -221,7 +228,7 @@ z-index: 999;
 }
 .yb_navigation-global__list-item__a {
     padding: 8px 16px;
-    color: white;
+    //color: white;
     font-size: $headingFive;
     transition: $transitionFast;
     &:hover {
@@ -288,7 +295,7 @@ z-index: 999;
         justify-content: center;
         align-items: center;
         position: absolute;
-        background: $black;
+        background: $lightgrey;
         width: 100%;
         top: 0;
         left: 0;
@@ -299,7 +306,7 @@ z-index: 999;
     .yb_navigation-mobile__line {
         transform: rotate(45deg) translate(-2.5px, -10px);
         margin-bottom: 0;
-        background: white;
+        background: $black;
         &:last-of-type {
             transform: rotate(-45deg) translate(-1.5px, 9px);
             width: 30px;
@@ -308,28 +315,45 @@ z-index: 999;
 }
 
 ///////////////////////////// FOOTER /////////////////////////////
-
 .yb_footer-global {
     margin-top: 200px;
-    justify-content: space-between;
-    height: 80px;
-}
-.yb_footer-global__text-container {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 24px;
 }
 .yb_footer-global__paragraph {
     font-weight: 600;
+    margin-bottom: 8px;
 }
 .yb_footer-global__copyright-note {
     color: $darkgrey;
-    padding-left: 16px;
 }
 .yb_footer-global__navigation-item {
     padding: 8px 16px;
     font-size: $fontSizeMedium;
     color: $darkgrey;
     transition: $transitionFast;
+    padding-left: 10px;
     &:hover {
         color: #000;
+    }
+}
+@media (min-width: $breakpointMedium) {
+    .yb_footer-global {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        height: 80px;
+        padding-bottom: 0;
+    }
+    .yb_footer-global__text-container {
+        display: flex;
+    }
+    .yb_footer-global__paragraph {
+        margin-bottom: 0;
+    }
+    .yb_footer-global__copyright-note {
+        padding-left: 16px;
     }
 }

@@ -4,8 +4,7 @@
 ///////////////////////////// INTRO /////////////////////////////
 .yb_section-intro {
     height: 100vh;
-    max-height: 900px;
-    min-height: 700px;
+    min-height: 500px;
 }
 .yb_section-intro__headline{
     margin-bottom: 24px;
@@ -25,6 +24,12 @@
     line-height: 1.8;
     b {
         color: $black;
+    }
+}
+@media (min-width: $breakpointMedium) {
+    .yb_section-intro {
+        max-height: 900px;
+        min-height: 700px;
     }
 }
 ///////////////////////////// INTRO - Avatar /////////////////////////////
@@ -221,10 +226,10 @@
 ///////////////////////////// ABOUT /////////////////////////////
 .yb_section-about {
     background: $lightgrey;
-    padding-top: 144px;
-    padding-bottom: 144px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     align-items: flex-start;
-    margin-bottom: 144px;
+    justify-content: flex-start;
 }
 .yb_section-about__paragraph {
     font-size: $headingFour;
@@ -240,24 +245,38 @@
 .yb_section-about__experience__headline {
     margin-bottom: 2px;
 }
-
+@media (min-width: $breakpointMedium) {
+    .yb_section-about {
+        padding-top: 144px;
+        padding-bottom: 144px;
+        margin-bottom: 144px;
+        justify-content: center;
+    }
+}
 ///////////////////////////// Work /////////////////////////////
+#work {
+    .yb_section-headline {
+        margin-bottom: 80px;
+    }
+}
 .yb_section-work {
-    margin-bottom: 200px;
+    padding-top: 80px;
+    margin-bottom: 80px;
     justify-content: flex-start;
 }
 .yb_section-work__project {
-    margin-bottom: 144px;
+    margin-bottom: 80px;
     &:last-child {
         margin-bottom: 0;
     }
 }
 .yb_section-work__project-img-container {
-    height: 480px;
+    height: 280px;
     background: #e9c0ba;
     padding: 0;
     position: relative;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 .yb_section-work__project-img {
     transition: ease-out 0.6s;
@@ -282,18 +301,6 @@
         }
     }
 }
-#loveco {
-    .yb_section-work__project-img-container {
-        order:2;
-    }
-    .yb_section-work__project-text-container {
-        //padding: 0;
-    }
-    /*.yb_section-work__project-img {
-        width: 160px;
-        height: 160px;
-    }*/
-}
 .yb_section-work__project-text-container {
     display: flex;
     align-items: center;
@@ -310,7 +317,7 @@
     line-height: 1.25;
 }
 .yb_section-work__project-button {
-    margin-top: 80px;
+    margin-top: 64px;
 }
 .yb_section-work__project-link {
     &:hover {
@@ -328,9 +335,35 @@
         }
     }
 }
+@media (min-width: $breakpointMedium) {
+    .yb_section-work {
+        margin-bottom: 200px;
+    }
+    .yb_section-work__project {
+        margin-bottom: 144px;
+    }
+    .yb_section-work__project-img-container {
+        height: 560px;
+        margin-bottom: 0;
+    }
+    .yb_section-work__project-button {
+        margin-top: 80px;
+    }
+    #work {
+        .yb_section-headline {
+            margin-bottom: 40px;
+        }
+    }
+    #loveco {
+        .yb_section-work__project-img-container {
+            order:2;
+        }
+    }
+}
 
 ///////////////////////////// Contact /////////////////////////////
 .yb_section-contact {
+    padding-top: 80px;
     flex-direction: column;
     hr {
         margin-bottom: 80px;
@@ -341,12 +374,23 @@
     margin-bottom: 32px;
     margin-top: 104px;
 }
+.yb_footer-global__text-container {
+    margin-bottom: 40px;
+}
 .yb_section-contact__paragraph {
     font-size: $headingTwo;
-    margin-bottom: 104px;
+    margin-bottom: 80px;
 }
 .yb_section-contact__button {
     //font-size: $headingFour;
     //color: $red;
     font-weight: 600;
+}
+@media (min-width: $breakpointMedium) {
+    .yb_section-contact {
+        padding-top: 0;
+    }
+    .yb_section-contact__paragraph {
+        margin-bottom: 104px;
+    }
 }
