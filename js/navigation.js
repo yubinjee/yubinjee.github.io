@@ -68,7 +68,7 @@ function showContent (event) {
 
 document.getElementById("nav-menu-toggle").addEventListener('click', toggleNavigation)
 
-var mobileNavigationLinks = document.getElementsByClassName('yb_navigation-global__list-item__a');
+var mobileNavigationLinks = document.getElementsByClassName('yb_navigation-global__list-item-link');
 
 for (var i = 0; i < mobileNavigationLinks.length; i++) {
     mobileNavigationLinks[i].addEventListener('click', showContent);

@@ -1017,15 +1017,16 @@ button {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
-  height: 0;
-  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none; }
 
 .yb_navigation-global__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  display: none; }
+  padding: 0; }
 
 .yb_navigation-global__list-item {
   padding-right: 0;
@@ -1075,10 +1076,10 @@ button {
       display: block;
   }*/ }
   .menu-is-open .yb_navigation-global {
+    opacity: 1;
     height: 100%;
-    z-index: 1; }
-  .menu-is-open .yb_navigation-global__list {
-    display: block; }
+    z-index: 1;
+    pointer-events: auto; }
   .menu-is-open .yb_navigation-mobile__line {
     transform: rotate(45deg) translate(-2.5px, -10px);
     margin-bottom: 0;
