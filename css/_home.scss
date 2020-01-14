@@ -229,8 +229,10 @@
     font-size: $headingFour;
     margin-bottom: 80px;
 }
-.yb_section-about__button {
-    margin-top: 40px;
+#about {
+    .yb_button{
+        margin-top: 40px;
+    }   
 }
 .yb_section-about__experience {
     margin-bottom: 24px;
@@ -293,6 +295,9 @@
         height: 280px;
         margin-bottom: 40px;
     }
+    .yb_button {
+        margin-top: 56px;
+    }
 }
 .yb_section-work {
     padding-top: 80px;
@@ -319,9 +324,6 @@
 .yb_section-work__project-paragraph {
     font-size: $headingTwo;
     line-height: 1.25;
-}
-.yb_section-work__project-button {
-    margin-top: 56px;
 }
 .yb_section-work__project-link {
     &:hover {
@@ -402,11 +404,6 @@
 .yb_section-contact__paragraph {
     font-size: $headingTwo;
     margin-bottom: 64px;
-}
-.yb_section-contact__button {
-    //font-size: $headingFour;
-    //color: $red;
-    font-weight: 600;
 }
 @media (min-width: $breakpointSmallMedium) {
     .yb_section-contact {

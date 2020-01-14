@@ -1408,7 +1408,7 @@ xl, extra-large: 1920px
   font-size: 24px;
   margin-bottom: 80px; }
 
-.yb_section-about__button {
+#about .yb_button {
   margin-top: 40px; }
 
 .yb_section-about__experience {
@@ -1463,6 +1463,8 @@ xl, extra-large: 1920px
 #work .yb_img-container {
   height: 280px;
   margin-bottom: 40px; }
+#work .yb_button {
+  margin-top: 56px; }
 
 .yb_section-work {
   padding-top: 80px;
@@ -1488,9 +1490,6 @@ xl, extra-large: 1920px
 .yb_section-work__project-paragraph {
   font-size: 36px;
   line-height: 1.25; }
-
-.yb_section-work__project-button {
-  margin-top: 56px; }
 
 .yb_section-work__project-link:hover .yb_button .pulsating-circle:before {
   display: block; }
@@ -1543,9 +1542,6 @@ xl, extra-large: 1920px
 .yb_section-contact__paragraph {
   font-size: 36px;
   margin-bottom: 64px; }
-
-.yb_section-contact__button {
-  font-weight: 600; }
 
 @media (min-width: 960px) {
   .yb_section-contact {
