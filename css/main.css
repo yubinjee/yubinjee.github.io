@@ -1046,7 +1046,7 @@ button {
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 10px 10%; }
 
-.yb_navigation-mobile button {
+.yb_navigation-mobile__button {
   opacity: 0;
   position: absolute;
   margin: 0;
@@ -1093,7 +1093,9 @@ button {
     position: relative;
     background: none;
     width: auto;
-    height: auto; }
+    height: auto;
+    opacity: 1;
+    pointer-events: auto; }
 
   .yb_navigation-mobile {
     display: none; }
