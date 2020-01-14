@@ -1303,10 +1303,11 @@ xl, extra-large: 1920px
   overflow: hidden; }
 
 .yb_section-work__project-img {
-  transition: ease-out 2s;
+  transition: ease-out 0.6s;
   position: absolute;
-  /*-webkit-filter: grayscale(100%);
-  filter: grayscale(100%);*/ }
+  -webkit-filter: grayscale(60%);
+  filter: grayscale(60%);
+  min-height: 100%; }
 
 .yb_section-work__project-img-link {
   position: absolute;
@@ -1317,7 +1318,9 @@ xl, extra-large: 1920px
   align-items: center;
   justify-content: center; }
   .yb_section-work__project-img-link:hover .yb_section-work__project-img {
-    transform: scale(1.05); }
+    transform: scale(1.04);
+    -webkit-filter: none;
+    filter: none; }
 
 #loveco {
   /*.yb_section-work__project-img {
