@@ -306,8 +306,9 @@ z-index: 999;
     .yb_navigation-global {
         position: relative;
         //justify-content: flex-end;
-        opacity: 1;
         background: none;
+        width: auto;
+        height: auto;
     }
     .yb_navigation-mobile {
         display: none;

@@ -1055,8 +1055,9 @@ button {
 @media (min-width: 600px) {
   .yb_navigation-global {
     position: relative;
-    opacity: 1;
-    background: none; }
+    background: none;
+    width: auto;
+    height: auto; }
 
   .yb_navigation-mobile {
     display: none; }
