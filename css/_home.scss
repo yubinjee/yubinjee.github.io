@@ -235,7 +235,7 @@
 .yb_section-about__experience {
     margin-bottom: 24px;
 }
-.yb_section-about__experience__headline {
+.yb_section-about__experience-headline {
     margin-bottom: 2px;
 }
 @media (min-width: $breakpointSmall) {
@@ -250,12 +250,12 @@
         width: 50%;
         margin-bottom: 40px;
     }
-    .yb_section-about__experience__headline {
+    .yb_section-about__experience-headline {
         margin-bottom: 8px;
         font-size: 16px;
         text-transform: lowercase;
     }
-    .yb_section-about__experience__year, .yb_section-about__experience__role {
+    .yb_section-about__experience-year, .yb_section-about__experience-role {
         font-size: $headingFour;
     }
 }
@@ -275,12 +275,12 @@
     .yb_section-about__experience {
         width: 100%;
     }
-    .yb_section-about__experience__headline {
+    .yb_section-about__experience-headline {
         font-size: $fontSizeMedium;
         text-transform: none;
         margin-bottom: 2px;
     }
-    .yb_section-about__experience__year, .yb_section-about__experience__role {
+    .yb_section-about__experience-year, .yb_section-about__experience-role {
         font-size: $fontSizeMedium;
     }
 }
