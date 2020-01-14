@@ -1029,7 +1029,26 @@ button {
 
 .yb_footer-global {
   margin-top: 200px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 80px; }
+
+.yb_footer-global__text-container {
+  display: flex; }
+
+.yb_footer-global__paragraph {
+  font-weight: 600; }
+
+.yb_footer-global__copyright-note {
+  color: #7A7A7A;
+  padding-left: 16px; }
+
+.yb_footer-global__navigation-item {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #7A7A7A;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .yb_footer-global__navigation-item:hover {
+    color: #000; }
 
 /*
 Material UI breakpoints

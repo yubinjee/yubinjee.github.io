@@ -312,4 +312,24 @@ z-index: 999;
 .yb_footer-global {
     margin-top: 200px;
     justify-content: space-between;
+    height: 80px;
+}
+.yb_footer-global__text-container {
+    display: flex;
+}
+.yb_footer-global__paragraph {
+    font-weight: 600;
+}
+.yb_footer-global__copyright-note {
+    color: $darkgrey;
+    padding-left: 16px;
+}
+.yb_footer-global__navigation-item {
+    padding: 8px 16px;
+    font-size: $fontSizeMedium;
+    color: $darkgrey;
+    transition: $transitionFast;
+    &:hover {
+        color: #000;
+    }
 }
