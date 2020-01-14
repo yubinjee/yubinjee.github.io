@@ -3,7 +3,7 @@
 
 ///////////////////////////// INTRO /////////////////////////////
 .yb_section-intro {
-    height: 100vh;
+    padding: 160px 5% 80px;
     min-height: 500px;
 }
 .yb_section-intro__headline{
@@ -28,6 +28,7 @@
 }
 @media (min-width: $breakpointMedium) {
     .yb_section-intro {
+        height: 100vh;
         max-height: 900px;
         min-height: 700px;
     }

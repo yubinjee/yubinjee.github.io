@@ -1122,7 +1122,7 @@ xl, extra-large: 1920px
   100% {
     transform: scale(0.9); } }
 .yb_section-intro {
-  height: 100vh;
+  padding: 160px 5% 80px;
   min-height: 500px; }
 
 .yb_section-intro__headline {
@@ -1141,6 +1141,7 @@ xl, extra-large: 1920px
 
 @media (min-width: 960px) {
   .yb_section-intro {
+    height: 100vh;
     max-height: 900px;
     min-height: 700px; } }
 .avatar-background:before {
