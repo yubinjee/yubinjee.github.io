@@ -260,8 +260,10 @@
     overflow: hidden;
 }
 .yb_section-work__project-img {
-    transition: ease 1s;
+    transition: ease-out 2s;
     position: absolute;
+    /*-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);*/
 }
 .yb_section-work__project-img-link {
     position: absolute;
@@ -273,7 +275,8 @@
     justify-content: center;
     &:hover {
         .yb_section-work__project-img {
-            transform: scale(1.08);
+            transform: scale(1.05);
+            //filter: none;
         }
     }
 }
@@ -306,6 +309,22 @@
 }
 .yb_section-work__project-button {
     margin-top: 80px;
+}
+.yb_section-work__project-link {
+    &:hover {
+        .yb_button {
+            .pulsating-circle {
+                &:before {
+                    display: block;
+                }
+                &:after {
+                    box-shadow: 0 0 8px rgba(0,0,0,.3);
+                    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+                }
+            }
+
+        }
+    }
 }
 
 ///////////////////////////// Contact /////////////////////////////
