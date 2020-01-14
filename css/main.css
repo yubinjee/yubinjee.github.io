@@ -1231,6 +1231,7 @@ xl, extra-large: 1920px
   .avatar-background:hover:before {
     opacity: 1; }
   .avatar-background .cloud-group {
+    z-index: 1;
     animation-name: move-right-first;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -1259,7 +1260,8 @@ xl, extra-large: 1920px
     width: 16px;
     top: 10px; }
   .avatar-background .avatar {
-    left: -7px; }
+    left: -7px;
+    z-index: 2; }
   .avatar-background .hair {
     top: 30px;
     left: 50px;

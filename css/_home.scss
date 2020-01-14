@@ -65,6 +65,7 @@
         opacity: 1;
     }
     .cloud-group {
+        z-index: 1;
         animation-name: move-right-first;
         animation-duration: 10s;
         animation-timing-function: linear;
@@ -101,6 +102,7 @@
     }
     .avatar {
         left: -7px;
+        z-index: 2;
     }
     .hair {
         //z-index: 3;
