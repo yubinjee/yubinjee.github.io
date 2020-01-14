@@ -11,9 +11,6 @@
     font-size: $headingTwo;
     font-weight: 400;
 }
-.yb_section-intro__headline-grey {
-    //color: $grey;
-}
 .yb_section-intro__headline-black {
     //color: $black;
     font-weight: 600;
@@ -26,7 +23,7 @@
         color: $black;
     }
 }
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmallMedium) {
     .yb_section-intro {
         padding: 0 5%;
         height: 100vh;
@@ -261,7 +258,7 @@
         font-size: $headingFour;
     }
 }
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmallMedium) {
     .yb_section-about {
         padding-top: 144px;
         padding-bottom: 144px;
@@ -291,6 +288,10 @@
     .yb_section-headline {
         margin-bottom: 80px;
     }
+    .yb_img-container {
+        height: 280px;
+        margin-bottom: 40px;
+    }
 }
 .yb_section-work {
     padding-top: 80px;
@@ -301,37 +302,6 @@
     margin-bottom: 104px;
     &:last-child {
         margin-bottom: 0;
-    }
-}
-.yb_section-work__project-img-container {
-    height: 280px;
-    background: #e9c0ba;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-.yb_section-work__project-img {
-    transition: ease-out 0.6s;
-    position: absolute;
-    -webkit-filter: grayscale(60%);
-    filter: grayscale(60%);
-    min-height: 100%;
-}
-.yb_section-work__project-img-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-        .yb_section-work__project-img {
-            transform: scale(1.04);
-            -webkit-filter: none;
-            filter: none;
-        }
     }
 }
 .yb_section-work__project-text-container {
@@ -372,11 +342,13 @@
     .yb_section-work__project-text-container {
         padding-left: 10px;
     }
-    .yb_section-work__project-img-container {
-        height: 400px;
+    #work {
+        .yb_img-container {
+            height: 400px;
+        }
     }
 }
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmallMedium) {
     .yb_section-work {
         margin-bottom: 200px;
         padding-top: 144px;
@@ -384,9 +356,8 @@
     .yb_section-work__project {
         margin-bottom: 144px;
     }
-    .yb_section-work__project-img-container {
-        height: 440px;
-        margin-bottom: 0;
+    .yb_section-work__project-text-container {
+        padding: 0 5%;
     }
     .yb_section-work__project-button {
         margin-top: 80px;
@@ -395,16 +366,22 @@
         .yb_section-headline {
             margin-bottom: 40px;
         }
+        .yb_img-container {
+            height: 480px;
+        margin-bottom: 0;
+        }
     }
     #loveco {
-        .yb_section-work__project-img-container {
+        .yb_img-container {
             order: 2;
         }
     }
 }
 @media (min-width: $breakpointLarge) {
-    .yb_section-work__project-img-container {
-        height: 560px;
+    #work {
+        .yb_img-container {
+            height: 560px;
+        }
     }
 }
 
@@ -430,7 +407,7 @@
     //color: $red;
     font-weight: 600;
 }
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmallMedium) {
     .yb_section-contact {
         padding-top: 0;
     }

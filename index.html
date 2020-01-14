@@ -158,7 +158,7 @@
                     </p>
                     
                 </div>
-                <div class="col-xs-12 col-s-10 col-sm-3 col-sm-offset-1 yb_section-about__experience-container">
+                <div class="col-xs-12 col-s-10 col-sm-3 col-sm-offset-1 col-lg-2 col-lg-offset-2 yb_section-about__experience-container">
                     <div class="yb_section-about__experience">
                         <p class="yb_section-about__experience__headline">Freelance</p>
                         <p class="yb_section-about__experience__role">UI design and frontend</p class="yb_section-about__experience__headline">
@@ -191,12 +191,22 @@
                     <h1 class="yb_section-headline">Work</h1>
                 </div>
                 <article class="yb_row yb_section-work__project" id="talentroad">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-1 yb_section-work__project-img-container">
-                        <a href="#" class="yb_section-work__project-img-link" title="Project Talentroad">
-                            <img src="assets/img/talentroad/road.jpg" class="yb_section-work__project-img" />
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-1 yb_img-container">
+                        <a href="#" class="yb_img-link" title="Project Talentroad">
+                            <!-- img size: 
+                                $breakpointExtraSmall max. 600 * 280
+                                $breakpointSmall max. 885 * 400
+                                $breakpointLarge max. 658 * 560
+                            -->
+                            <picture>
+                                <source srcset="assets/img/projects/talentroad/thumbnail/curvy-road_600x280.jpg" media="(max-width: 599px)">
+                                <source srcset="assets/img/projects/talentroad/thumbnail/curvy-road_885x400.jpg" media="(max-width: 959px)">
+                                <source srcset="assets/img/projects/talentroad/thumbnail/curvy-road_658x560.jpg" media="(min-width: 960px)">
+                                <img src="assets/img/projects/talentroad/thumbnail/curvy-road_658x560.jpg" class="yb_img" alt="curvy highway road" />
+                            </picture>
                         </a>
                     </div>
-                    <div class="col-s-8 col-s-offset-1 col-sm-4 yb_section-work__project-text-container">
+                    <div class="col-s-8 col-s-offset-1 col-sm-5 col-sm-offset-0 yb_section-work__project-text-container">
                         <a class="yb_section-work__project-link" href="#" title="Project Talentroad">                          
                             <h2 class="yb_section-work__project-headline">
                                 Talentroad
@@ -211,9 +221,9 @@
                     </div>
                 </article>
                 <article class="yb_row yb_section-work__project" id="loveco">
-                    <div class="col-xs-12 col-sm-8 yb_section-work__project-img-container">
-                        <a href="#" class="yb_section-work__project-img-link" title="Project Loveco">
-                            <img src="assets/img/loveco/plant.jpg" class="yb_section-work__project-img" />
+                    <div class="col-xs-12 col-sm-8 yb_img-container">
+                        <a href="#" class="yb_img-link" title="Project Loveco">
+                            <img src="assets/img/projects/loveco/plant.jpg" class="yb_img" />
                         </a>
                     </div>
                     <div class="col-s-8 col-s-offset-1 col-sm-4 col-sm-offset-0 yb_section-work__project-text-container" title="Project Loveco">
@@ -222,7 +232,7 @@
                                 Loveco
                             </h2>
                             <h3 class="yb_section-work__project-paragraph">
-                                Online shop for eco, fair and vegan fashion
+                                Eco, fair and vegan fashion
                             </h3>
                             <div class="yb_button yb_section-work__project-button">
                                 <div class="pulsating-circle"></div>View project
@@ -231,12 +241,12 @@
                     </div>
                 </article>     
                 <article class="yb_row yb_section-work__project" id="hammoc">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-1 yb_section-work__project-img-container">
-                        <a href="#" class="yb_section-work__project-img-link" title="Project hammoc">
-                            <img src="assets/img/hammoc/shelf.jpg" class="yb_section-work__project-img" />
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-1 yb_img-container">
+                        <a href="#" class="yb_img-link" title="Project hammoc">
+                            <img src="assets/img/projects/hammoc/shelf.jpg" class="yb_img" />
                         </a>
                     </div>
-                    <div class="col-s-8 col-s-offset-1 col-sm-4 yb_section-work__project-text-container">
+                    <div class="col-s-8 col-s-offset-1 col-sm-5 col-sm-offset-0 yb_section-work__project-text-container">
                         <a class="yb_section-work__project-link" href="#" title="Project hammoc">
                             <h2 class="yb_section-work__project-headline">
                                 Hammoc

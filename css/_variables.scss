@@ -28,11 +28,11 @@ $transitionFast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
 //breakpoints
-$breakpointExtraSmall: 0px;
-$breakpointSmall: 600px;
-$breakpointMedium: 960px;
-$breakpointLarge: 1280px;
-$breakpointExtraLarge: 1440px;
+$breakpointExtraSmall: 0px; //xs
+$breakpointSmall: 600px; //s
+$breakpointSmallMedium: 960px; //sm
+$breakpointMedium: 1024px; // md
+$breakpointLarge: 1280px; //lg
 /*
 Material UI breakpoints
 xs, extra-small: 0px
