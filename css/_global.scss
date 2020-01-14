@@ -162,7 +162,7 @@ button {
     justify-content: space-between;
     height: 80px;
     transition: $transitionFast;
-    z-index: 1;
+    z-index: 10;
     margin: 0;
     position: absolute;
     width: 90%;
@@ -178,7 +178,7 @@ button {
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
 position: fixed;
-background: white;
+background: #ffffffed;
 z-index: 999;
 }
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -196,6 +196,7 @@ z-index: 999;
 .yb_header-global__logo {
     transition: $transitionFast;
     padding: 8px 8px 8px 0;
+    z-index: 999;
     span {
         color: $darkgrey;
         margin-left: 8px;
@@ -204,31 +205,50 @@ z-index: 999;
 
 ///////////////////////////// NAVIGATION /////////////////////////////
 .yb_navigation-global {
-    display: none;
-    justify-content: flex-end;
+    opacity: 0;
+    background: white;
+    //justify-content: flex-end;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    transition: 2s ease;
+    transition: $transitionFast;
 }
 .yb_navigation-global__list {
     list-style-type: none;
-    display: flex;
+    //display: flex;
     margin: 0;
     padding: 0;
+    //justify-content: center;
+    //align-items: center;
+    position: absolute;
+    //background: $lightgrey;
+    width: 100%;
+    height: 100%;
+    //top: 0;
+    //left: 0;
+    flex-direction: column;
+    //overflow: scroll;
+    //transition: $transition;
 }
 .yb_navigation-global__list-item {
     padding-right: 0;
-    padding-bottom: 40px;
+    padding-bottom: 16px;
+    &:first-child {
+        margin-top: 160px;
+    }
     &:last-child {
-        padding-right: 0;
+        margin-top: 32px;
+        .yb_navigation-global__list-item__a {
+            color: $middlegrey;
+        }
     }
 }
 .yb_navigation-global__list-item__a {
-    padding: 8px 16px;
+    padding: 10px 10%;
     //color: white;
+    display: inline-block;
     font-size: $headingFive;
     transition: $transitionFast;
     &:hover {
@@ -236,16 +256,20 @@ z-index: 999;
     }
 }
 //Hide mobile navigation on desktop
-@media (min-width: $breakpointMedium) {
+@media (min-width: $breakpointSmall) {
     .yb_navigation-global {
         display: block;
         position: relative;
+        justify-content: flex-end;
     }
     .yb_navigation-mobile {
         display: none;
     }
+    .yb_navigation-global__list {
+        margin-right: -40px;
+    }
     .yb_navigation-global__list-item {
-        padding-right: 40px;
+        padding-right: 24px;
         padding-bottom: 0;
         &:first-child {
             display: none;
@@ -291,20 +315,12 @@ z-index: 999;
 //when toggle the burger menu on mobile
 .menu-is-open {
     .yb_navigation-global {
-        display: flex;
+        //display: block;
+        opacity: 1;
         z-index: 1;
-    }
-    .yb_navigation-global__list {
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        background: $lightgrey;
-        width: 100%;
-        top: 0;
-        left: 0;
-        flex-direction: column;
+   }
+    .yb_navigation-global__list {    
         height: 100%;
-        overflow: scroll;
     }
     .yb_navigation-mobile__line {
         transform: rotate(45deg) translate(-2.5px, -10px);

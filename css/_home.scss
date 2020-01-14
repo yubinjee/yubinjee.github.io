@@ -35,6 +35,15 @@
 }
 ///////////////////////////// INTRO - Avatar /////////////////////////////
 .avatar-background {
+    width: 200px;
+    height: 200px;
+    background: #bcc8d8;
+    margin-bottom: 0;
+    margin-left: -30px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.7);
     &:before {
         content: "This is pure CSS magic. Isn't it amazing?";
         position: absolute;
@@ -54,17 +63,6 @@
     &:hover:before {
         opacity: 1;
     }
-}
-.avatar-background {
-    width: 200px;
-    height: 200px;
-    background: #bcc8d8;
-    margin-bottom: 0;
-    margin-left: -30px;
-    border-radius: 100%;
-    position: relative;
-    overflow: hidden;
-    transform: scale(0.7);
     .cloud-group {
         animation-name: move-right-first;
         animation-duration: 10s;
@@ -104,7 +102,7 @@
         left: -7px;
     }
     .hair {
-        z-index: 3;
+        //z-index: 3;
         top: 30px;
         left: 50px;
         width: 120px;
@@ -113,7 +111,7 @@
         background: $black;
     }
     .fringe {
-        z-index: 99;
+        z-index: 4;
         top: 53px;
         left: 95px;
         width: 63px;
@@ -135,7 +133,7 @@
     }
     .face {
         border-radius: 100px 100px 130px 130px;
-        z-index: 20;
+        z-index: 3;
         top: 70px;
         left: 70px;
         width: 80px;
@@ -143,7 +141,7 @@
         background: #F0BEAF;
     }
     .eye {
-        z-index: 30;
+        z-index: 5;
         top: 100px;
         left: 80px;
         width: 10px;
@@ -168,7 +166,7 @@
         }
     } 
     .nose {
-        z-index: 20;
+        z-index: 5;
         top: 100px;
         left: 107px;
         width: 8px;
@@ -176,16 +174,8 @@
         background: #DB9B99;
         border-radius: 100px;
     }
-    .mouth {
-        width: 500px; 
-        height: 100px;  
-        border: solid 5px #000;
-        border-color: #000 transparent transparent transparent;
-        border-radius: 50%/100px 100px 0 0;
-        transition: $transition;
-    }
     .neck {
-        z-index: 13;
+        z-index: 2;
         width: 30px;
         height: 35px;
         background: #DB9B99;
@@ -197,14 +187,15 @@
         width: 30px;
         height: 30px;
         top: 96px;
-        z-index: 20;
+        z-index: 5;
         left: 100px;
         border: solid 3px $red;
         border-color: transparent transparent $red transparent;
         border-radius: 0 0 150px 30%/90px;
+        transition: $transition;
     }
     .body {
-        z-index: 10;
+        z-index: 1;
         top: 150px;
         left: 60px;
         width: 100px;

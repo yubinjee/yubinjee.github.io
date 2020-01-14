@@ -904,7 +904,7 @@ button {
   justify-content: space-between;
   height: 80px;
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  z-index: 1;
+  z-index: 10;
   margin: 0;
   position: absolute;
   width: 90%;
@@ -917,7 +917,7 @@ button {
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
-  background: white;
+  background: #ffffffed;
   z-index: 999; }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -932,50 +932,63 @@ button {
     padding-top: 75px; } }
 .yb_header-global__logo {
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 8px 8px 8px 0; }
+  padding: 8px 8px 8px 0;
+  z-index: 999; }
   .yb_header-global__logo span {
     color: #7A7A7A;
     margin-left: 8px; }
 
 .yb_navigation-global {
-  display: none;
-  justify-content: flex-end;
+  opacity: 0;
+  background: white;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  transition: 2s ease; }
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .yb_navigation-global__list {
   list-style-type: none;
-  display: flex;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-direction: column; }
 
 .yb_navigation-global__list-item {
   padding-right: 0;
-  padding-bottom: 40px; }
+  padding-bottom: 16px; }
+  .yb_navigation-global__list-item:first-child {
+    margin-top: 160px; }
   .yb_navigation-global__list-item:last-child {
-    padding-right: 0; }
+    margin-top: 32px; }
+    .yb_navigation-global__list-item:last-child .yb_navigation-global__list-item__a {
+      color: #ababab; }
 
 .yb_navigation-global__list-item__a {
-  padding: 8px 16px;
+  padding: 10px 10%;
+  display: inline-block;
   font-size: 20px;
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .yb_navigation-global__list-item__a:hover {
     color: #000; }
 
-@media (min-width: 960px) {
+@media (min-width: 600px) {
   .yb_navigation-global {
     display: block;
-    position: relative; }
+    position: relative;
+    justify-content: flex-end; }
 
   .yb_navigation-mobile {
     display: none; }
 
+  .yb_navigation-global__list {
+    margin-right: -40px; }
+
   .yb_navigation-global__list-item {
-    padding-right: 40px;
+    padding-right: 24px;
     padding-bottom: 0; }
     .yb_navigation-global__list-item:first-child {
       display: none; }
@@ -1011,19 +1024,10 @@ button {
     transform-origin: 0% 100%; }
 
 .menu-is-open .yb_navigation-global {
-  display: flex;
+  opacity: 1;
   z-index: 1; }
 .menu-is-open .yb_navigation-global__list {
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background: #f6f6f6;
-  width: 100%;
-  top: 0;
-  left: 0;
-  flex-direction: column;
-  height: 100%;
-  overflow: scroll; }
+  height: 100%; }
 .menu-is-open .yb_navigation-mobile__line {
   transform: rotate(45deg) translate(-2.5px, -10px);
   margin-bottom: 0;
@@ -1151,24 +1155,6 @@ xl, extra-large: 1920px
     height: 100vh;
     max-height: 900px;
     min-height: 700px; } }
-.avatar-background:before {
-  content: "This is pure CSS magic. Isn't it amazing?";
-  position: absolute;
-  display: flex;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background: #212121d4;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-.avatar-background:hover:before {
-  opacity: 1; }
-
 .avatar-background {
   width: 200px;
   height: 200px;
@@ -1179,6 +1165,23 @@ xl, extra-large: 1920px
   position: relative;
   overflow: hidden;
   transform: scale(0.7); }
+  .avatar-background:before {
+    content: "This is pure CSS magic. Isn't it amazing?";
+    position: absolute;
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #212121d4;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .avatar-background:hover:before {
+    opacity: 1; }
   .avatar-background .cloud-group {
     animation-name: move-right-first;
     animation-duration: 10s;
@@ -1210,7 +1213,6 @@ xl, extra-large: 1920px
   .avatar-background .avatar {
     left: -7px; }
   .avatar-background .hair {
-    z-index: 3;
     top: 30px;
     left: 50px;
     width: 120px;
@@ -1218,7 +1220,7 @@ xl, extra-large: 1920px
     border-radius: 100px 100px 0 0;
     background: #212121; }
   .avatar-background .fringe {
-    z-index: 99;
+    z-index: 4;
     top: 53px;
     left: 95px;
     width: 63px;
@@ -1238,14 +1240,14 @@ xl, extra-large: 1920px
       transform: rotate(-45deg); }
   .avatar-background .face {
     border-radius: 100px 100px 130px 130px;
-    z-index: 20;
+    z-index: 3;
     top: 70px;
     left: 70px;
     width: 80px;
     height: 80px;
     background: #F0BEAF; }
   .avatar-background .eye {
-    z-index: 30;
+    z-index: 5;
     top: 100px;
     left: 80px;
     width: 10px;
@@ -1267,22 +1269,15 @@ xl, extra-large: 1920px
       animation-duration: 4s;
       animation-iteration-count: infinite; }
   .avatar-background .nose {
-    z-index: 20;
+    z-index: 5;
     top: 100px;
     left: 107px;
     width: 8px;
     height: 14px;
     background: #DB9B99;
     border-radius: 100px; }
-  .avatar-background .mouth {
-    width: 500px;
-    height: 100px;
-    border: solid 5px #000;
-    border-color: #000 transparent transparent transparent;
-    border-radius: 50%/100px 100px 0 0;
-    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
   .avatar-background .neck {
-    z-index: 13;
+    z-index: 2;
     width: 30px;
     height: 35px;
     background: #DB9B99;
@@ -1293,13 +1288,14 @@ xl, extra-large: 1920px
     width: 30px;
     height: 30px;
     top: 96px;
-    z-index: 20;
+    z-index: 5;
     left: 100px;
     border: solid 3px #ff4040;
     border-color: transparent transparent #ff4040 transparent;
-    border-radius: 0 0 150px 30%/90px; }
+    border-radius: 0 0 150px 30%/90px;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
   .avatar-background .body {
-    z-index: 10;
+    z-index: 1;
     top: 150px;
     left: 60px;
     width: 100px;
