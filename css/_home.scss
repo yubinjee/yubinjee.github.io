@@ -291,7 +291,7 @@
     .yb_section-headline {
         margin-bottom: 80px;
     }
-    .yb_img-container {
+    .yb_img-container__dynamic {
         height: 280px;
         margin-bottom: 40px;
     }
@@ -346,7 +346,7 @@
         padding-left: 10px;
     }
     #work {
-        .yb_img-container {
+        .yb_img-container__dynamic {
             height: 400px;
         }
     }
@@ -369,20 +369,20 @@
         .yb_section-headline {
             margin-bottom: 40px;
         }
-        .yb_img-container {
+        .yb_img-container__dynamic {
             height: 480px;
         margin-bottom: 0;
         }
     }
     #loveco {
-        .yb_img-container {
+        .yb_img-container__dynamic {
             order: 2;
         }
     }
 }
 @media (min-width: $breakpointLarge) {
     #work {
-        .yb_img-container {
+        .yb_img-container__dynamic {
             height: 560px;
         }
     }

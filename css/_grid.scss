@@ -3,17 +3,13 @@
 .yb_container {
   padding: 0 5%;
   //margin: 0 -10px;
-  //width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.yb_container__fluid {
+  padding: 0;
 }
 .yb_row {
   /*margin-right: -15px;
