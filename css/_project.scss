@@ -1,3 +1,18 @@
+.yb_project-page__loveco {
+    background: #fdeae6;
+    .sticky {
+        background: #fdeae6;
+    }
+}
+.yb_project-page__talentroad {
+    background: #e0e0e0;
+    //background: #B1B9CD;
+    .sticky {
+        background: #e0e0e0;
+        //background: #B1B9CD;
+    }
+}
+///////////////////////////// Thumbnail /////////////////////////////
 .yb_section-thumbnail__img-container {
     background: $grey;
     padding: 0;
@@ -11,6 +26,14 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-filter: grayscale(60%);
+    filter: grayscale(60%);
+}
+.yb_section-thumbnail__img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #ffffff5c, transparent);
 }
 @media (min-width: $breakpointMedium) {
     .yb_section-thumbnail__img-container {
@@ -18,6 +41,49 @@
     }
 }
 
+///////////////////////////// Brief /////////////////////////////
 .yb_section-brief {
     align-items: flex-start;
+    padding-top: 80px;
+}
+.yb_section-brief__notes {
+    margin-bottom: 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.yb_section-brief__notes-headline {
+    font-size: $fontSizeSmall;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.yb_section-brief__notes-paragraph {
+    font-size: $fontSizeSmall;
+}
+.yb_section-brief__text-container-client {
+    font-size: $headingFive;
+    font-weight: 500;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.yb_section-brief__text-container-headline {
+    font-size: $headingOne;
+    line-height: 1.25;
+    margin-bottom: 80px;
+}
+.yb_section-brief__text-container-notice {
+    margin-top: 40px;
+    color: $darkgrey;
+}
+
+///////////////////////////// Content /////////////////////////////
+.yb_section-content {
+    padding-top: 104px;
+}
+.yb_section-content__img-container {
+    margin-bottom: 40px;
+}
+.yb_section-content__img {
+    width: 100%;
 }
