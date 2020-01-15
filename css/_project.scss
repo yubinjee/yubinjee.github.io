@@ -6,10 +6,14 @@
 }
 .yb_project-page__talentroad {
     background: #e0e0e0;
-    //background: #B1B9CD;
     .sticky {
         background: #e0e0e0;
-        //background: #B1B9CD;
+    }
+}
+.yb_project-page__hammoc{
+    background: $lightgrey;
+    .sticky {
+        background: $lightgrey;
     }
 }
 ///////////////////////////// Thumbnail /////////////////////////////
@@ -45,6 +49,7 @@
 .yb_section-brief {
     align-items: flex-start;
     padding-top: 80px;
+    margin-bottom: 104px;
 }
 .yb_section-brief__notes {
     margin-bottom: 32px;
@@ -79,7 +84,7 @@
 
 ///////////////////////////// Content /////////////////////////////
 .yb_section-content {
-    padding-top: 104px;
+    margin-bottom: 160px;
 }
 .yb_section-content__img-container {
     margin-bottom: 40px;
@@ -87,4 +92,23 @@
 }
 .yb_section-content__img {
     width: 100%;
+}
+
+///////////////////////////// Next /////////////////////////////
+.yb_section-next__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.yb_section-next__project-title {
+    font-size: $headingOne;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+#next {
+    .yb_section-headline {
+        margin-left: 64px;
+        margin-bottom: 104px;
+    }
 }

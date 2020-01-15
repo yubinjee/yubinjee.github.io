@@ -1498,6 +1498,11 @@ button {
   .yb_project-page__talentroad .sticky {
     background: #e0e0e0; }
 
+.yb_project-page__hammoc {
+  background: #f6f6f6; }
+  .yb_project-page__hammoc .sticky {
+    background: #f6f6f6; }
+
 .yb_section-thumbnail__img-container {
   background: #CaCaCa;
   padding: 0;
@@ -1525,7 +1530,8 @@ button {
     height: 560px; } }
 .yb_section-brief {
   align-items: flex-start;
-  padding-top: 80px; }
+  padding-top: 80px;
+  margin-bottom: 104px; }
 
 .yb_section-brief__notes {
   margin-bottom: 32px; }
@@ -1557,7 +1563,7 @@ button {
   color: #7A7A7A; }
 
 .yb_section-content {
-  padding-top: 104px; }
+  margin-bottom: 160px; }
 
 .yb_section-content__img-container {
   margin-bottom: 40px;
@@ -1565,5 +1571,20 @@ button {
 
 .yb_section-content__img {
   width: 100%; }
+
+.yb_section-next__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.yb_section-next__project-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px; }
+
+#next .yb_section-headline {
+  margin-left: 64px;
+  margin-bottom: 104px; }
 
 /*# sourceMappingURL=main.css.map */
