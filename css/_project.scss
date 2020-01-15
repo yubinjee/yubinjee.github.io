@@ -17,6 +17,9 @@
     }
 }
 ///////////////////////////// Thumbnail /////////////////////////////
+.yb_section-thumbnail {
+    margin-bottom: 56px;
+}
 .yb_section-thumbnail__img-container {
     background: $grey;
     padding: 0;
@@ -39,6 +42,14 @@
     height: 100%;
     background: linear-gradient(180deg, #ffffff5c, transparent);
 }
+@media (min-width: $breakpointSmall) {
+    .yb_section-thumbnail {
+        margin-bottom: 80px;
+    }
+    .yb_section-thumbnail__img-container {
+        height: 480px;
+    }
+}
 @media (min-width: $breakpointMedium) {
     .yb_section-thumbnail__img-container {
         height: 560px;
@@ -48,11 +59,30 @@
 ///////////////////////////// Brief /////////////////////////////
 .yb_section-brief {
     align-items: flex-start;
-    padding-top: 80px;
     margin-bottom: 104px;
+}
+.yb_section-brief__headline-container {
+    margin-bottom: 56px;
+}
+.yb_section-brief__project-title {
+    font-size: $headingFive;
+    font-weight: 500;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.yb_section-brief__project-slogan {
+    font-size: $headingOne;
+    line-height: 1.25;
+    
+}
+.yb_section-brief__notes-container {
+    display: flex;
+    margin-bottom: 56px;
 }
 .yb_section-brief__notes {
     margin-bottom: 32px;
+    width: calc(100% / 3);
     &:last-child {
         margin-bottom: 0;
     }
@@ -65,21 +95,19 @@
 .yb_section-brief__notes-paragraph {
     font-size: $fontSizeSmall;
 }
-.yb_section-brief__text-container-client {
-    font-size: $headingFive;
-    font-weight: 500;
-    text-transform: lowercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-.yb_section-brief__text-container-headline {
-    font-size: $headingOne;
-    line-height: 1.25;
-    margin-bottom: 80px;
-}
-.yb_section-brief__text-container-notice {
+.yb_section-brief__notice {
     margin-top: 40px;
     color: $darkgrey;
+}
+@media (min-width: $breakpointSmall) {
+    .yb_section-brief__notes-container {
+        position: absolute;
+        left: 5%;
+        display: block;
+    }
+    .yb_section-brief__notes {
+        width: 100%;
+    }
 }
 
 ///////////////////////////// Content /////////////////////////////
@@ -87,11 +115,16 @@
     margin-bottom: 160px;
 }
 .yb_section-content__img-container {
-    margin-bottom: 40px;
+    margin-bottom: 5%;
     padding: 0;
 }
 .yb_section-content__img {
     width: 100%;
+}
+@media (min-width: $breakpointSmall) {
+    .yb_section-content__img-container {
+        //margin-bottom: 40px;
+    }
 }
 
 ///////////////////////////// Next /////////////////////////////

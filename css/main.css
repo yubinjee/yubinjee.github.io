@@ -1515,6 +1515,9 @@ button {
   .yb_project-page__hammoc .sticky {
     background: #f6f6f6; }
 
+.yb_section-thumbnail {
+  margin-bottom: 56px; }
+
 .yb_section-thumbnail__img-container {
   background: #CaCaCa;
   padding: 0;
@@ -1537,16 +1540,40 @@ button {
   height: 100%;
   background: linear-gradient(180deg, #ffffff5c, transparent); }
 
+@media (min-width: 600px) {
+  .yb_section-thumbnail {
+    margin-bottom: 80px; }
+
+  .yb_section-thumbnail__img-container {
+    height: 480px; } }
 @media (min-width: 1024px) {
   .yb_section-thumbnail__img-container {
     height: 560px; } }
 .yb_section-brief {
   align-items: flex-start;
-  padding-top: 80px;
   margin-bottom: 104px; }
 
+.yb_section-brief__headline-container {
+  margin-bottom: 56px; }
+
+.yb_section-brief__project-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px; }
+
+.yb_section-brief__project-slogan {
+  font-size: 48px;
+  line-height: 1.25; }
+
+.yb_section-brief__notes-container {
+  display: flex;
+  margin-bottom: 56px; }
+
 .yb_section-brief__notes {
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  width: calc(100% / 3); }
   .yb_section-brief__notes:last-child {
     margin-bottom: 0; }
 
@@ -1558,27 +1585,23 @@ button {
 .yb_section-brief__notes-paragraph {
   font-size: 14px; }
 
-.yb_section-brief__text-container-client {
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: lowercase;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px; }
-
-.yb_section-brief__text-container-headline {
-  font-size: 48px;
-  line-height: 1.25;
-  margin-bottom: 80px; }
-
-.yb_section-brief__text-container-notice {
+.yb_section-brief__notice {
   margin-top: 40px;
   color: #7A7A7A; }
 
+@media (min-width: 600px) {
+  .yb_section-brief__notes-container {
+    position: absolute;
+    left: 5%;
+    display: block; }
+
+  .yb_section-brief__notes {
+    width: 100%; } }
 .yb_section-content {
   margin-bottom: 160px; }
 
 .yb_section-content__img-container {
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   padding: 0; }
 
 .yb_section-content__img {
