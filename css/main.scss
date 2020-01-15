@@ -1,8 +1,10 @@
+@import "variables.scss";
+@import "animation.scss";
+
+//import global
 @import "grid.scss";
 @import "global.scss";
 
 //import pages
 @import "home.scss";
 @import "project.scss";
-
-

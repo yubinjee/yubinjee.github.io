@@ -3,7 +3,7 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    height: 560px;
+    height: 400px;
 }
 .yb_section-thumbnail__img-container__img {
     position: absolute;
@@ -11,4 +11,9 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+@media (min-width: $breakpointMedium) {
+    .yb_section-thumbnail__img-container {
+        height: 560px;
+    }
 }
