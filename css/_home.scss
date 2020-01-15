@@ -252,6 +252,7 @@
     }
     .yb_section-about__experience-year, .yb_section-about__experience-role {
         font-size: $headingFour;
+        line-height: 1.5;
     }
 }
 @media (min-width: $breakpointSmallMedium) {
@@ -398,6 +399,7 @@
 .yb_section-contact__paragraph {
     font-size: $headingTwo;
     margin-bottom: 64px;
+    line-height: 1.5;
 }
 @media (min-width: $breakpointSmallMedium) {
     .yb_section-contact {
