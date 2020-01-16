@@ -79,6 +79,7 @@
 .yb_section-brief {
     align-items: flex-start;
     margin-bottom: 104px;
+    position: relative;
 }
 .yb_section-brief__headline-container {
     margin-bottom: 56px;
@@ -176,7 +177,7 @@
 #websiteMobile {
     background: #3e3e3e;
     padding: 10% 15%;
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     .yb_row {
@@ -184,7 +185,7 @@
     }
     img {
         width: 30%;
-    }
+    }*/
 }
 #websiteEditorial {
     background: #F5E3E0;
