@@ -233,6 +233,9 @@
 .yb_section-about__experience {
     margin-bottom: 24px;
 }
+.yb_section-about__experience-headline {
+    font-size: $fontSizeMedium;
+}
 @media (min-width: $breakpointSmall) {
     .yb_section-about {
         justify-content: center;
@@ -247,7 +250,6 @@
     }
     .yb_section-about__experience-headline {
         margin-bottom: 8px;
-        font-size: 16px;
         text-transform: lowercase;
     }
     .yb_section-about__experience-year, .yb_section-about__experience-role {
