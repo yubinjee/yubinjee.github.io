@@ -1651,9 +1651,46 @@ button {
 .yb_section-content__img-container {
   margin-bottom: 5%;
   padding: 0; }
+  .yb_section-content__img-container#styleguideOverview {
+    background: #212121;
+    padding: 10% 0; }
+  .yb_section-content__img-container#websiteHome {
+    background: #c4c4c4;
+    padding: 10%; }
+  .yb_section-content__img-container#websiteTripple {
+    background: #3F3F3F;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10%;
+    padding-bottom: 0; }
+  .yb_section-content__img-container#websiteAbout {
+    background: #212121;
+    padding: 10%; }
+  .yb_section-content__img-container#websiteMobile {
+    background: #3e3e3e;
+    padding: 10% 15%;
+    display: flex;
+    justify-content: space-between; }
+    .yb_section-content__img-container#websiteMobile img {
+      width: 30%; }
+
+.yb_section-content__img-container__left-col, .yb_section-content__img-container__right-col {
+  width: 45%; }
+
+.yb_section-content__img-container__left-col {
+  padding-right: 5%; }
+
+.yb_section-content__img-container__right-col {
+  padding-left: 5%;
+  display: flex;
+  flex-wrap: wrap; }
+  .yb_section-content__img-container__right-col :first-child {
+    margin-bottom: 20%; }
 
 .yb_section-content__img {
-  width: 100%; }
+  width: 100%;
+  vertical-align: bottom; }
 
 @media (min-width: 600px) {
   .yb_section-content {
