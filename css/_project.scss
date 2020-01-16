@@ -1,19 +1,30 @@
 .yb_project-page__loveco, .yb_project-page__talentroad, .yb_project-page__hammoc {
+    background: $lightgrey;
+    .sticky {
+        background: $lightgrey;
+    }
     .yb_footer-global {
         margin-top: 160px;
     }
 }
-
-.yb_project-page__loveco {
+.yb_project-page__talentroad {
+    background: white;
+    .sticky {
+        background: white;
+    }
+}
+/*.yb_project-page__loveco {
     background: #fdeae6;
     .sticky {
         background: #fdeae6;
     }
 }
 .yb_project-page__talentroad {
-    background: #e0e0e0;
+    //background: #e0e0e0;
+    background: $lightgrey;
     .sticky {
-        background: #e0e0e0;
+        //background: #e0e0e0;
+        background: $lightgrey;
     }
 }
 .yb_project-page__hammoc{
@@ -21,7 +32,7 @@
     .sticky {
         background: $lightgrey;
     }
-}
+}*/
 ///////////////////////////// Thumbnail /////////////////////////////
 .yb_section-thumbnail {
     margin-bottom: 56px;
@@ -39,8 +50,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-filter: grayscale(60%);
-    filter: grayscale(60%);
+    /*-webkit-filter: grayscale(60%);
+    filter: grayscale(60%);*/
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
 }
 .yb_section-thumbnail__img-overlay {
     position: absolute;
@@ -132,38 +145,47 @@
 .yb_section-content {
     margin-bottom: 104px;
 }
+.yb_section-content__img {
+    width: 100%;  
+    vertical-align: bottom;
+}
 .yb_section-content__img-container {
     margin-bottom: 5%;
     padding: 0;
-    &#styleguideOverview {
-        background: $black;
-        padding: 10% 0;
+}
+#styleguideOverview {
+    background: $black;
+    padding: 10% 0;
+}
+#websiteHome {
+    background: #c4c4c4;
+    padding: 10%;
+}
+#websiteOverview {
+    background: #3F3F3F;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10%;
+    padding-bottom: 0;
+}
+#websiteAbout {
+    background: #212121;
+    padding: 10%;
+}
+#websiteMobile {
+    background: #3e3e3e;
+    padding: 10% 15%;
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 30%;
     }
-    &#websiteHome {
-        background: #c4c4c4;
-        padding: 10%;
-    }
-    &#websiteTripple {
-        background: #3F3F3F;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 10%;
-        padding-bottom: 0;
-    }
-    &#websiteAbout {
-        background: #212121;
-        padding: 10%;
-    }
-    &#websiteMobile {
-        background: #3e3e3e;
-        padding: 10% 15%;
-        display: flex;
-        justify-content: space-between;
-        img {
-            width: 30%;
-        }
-    }
+}
+#websiteEditorial {
+    background: #e9c0ba;
+    padding: 10%;
+    padding-bottom: 0;
 }
 .yb_section-content__img-container__left-col, .yb_section-content__img-container__right-col {
     width: 45%;
@@ -179,11 +201,21 @@
         margin-bottom: 20%;
     }
 }
-.yb_section-content__img {
-    width: 100%;  
-    vertical-align: bottom;
+.yb_project-page__loveco {
+    #websiteHome {
+        background: #e9c0ba;
+    }
+    #websiteOverview {
+        background: #F9E9E9;
+        padding: 8%;
+        padding-bottom: 0;
+    }
+    .yb_section-content__img-container__right-col {
+        & :first-child {
+            margin-bottom: 0;
+        }
+    }
 }
-
 @media (min-width: $breakpointSmall) {
     .yb_section-content {
         margin-bottom: 104px;
