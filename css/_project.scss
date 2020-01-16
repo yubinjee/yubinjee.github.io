@@ -178,12 +178,16 @@
     padding: 10% 15%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    .yb_row {
+        justify-content: space-between;
+    }
     img {
         width: 30%;
     }
 }
 #websiteEditorial {
-    background: #e9c0ba;
+    background: #F5E3E0;
     padding: 10%;
     padding-bottom: 0;
 }
@@ -206,9 +210,12 @@
         background: #e9c0ba;
     }
     #websiteOverview {
-        background: #F9E9E9;
+        background: #e9c0ba;
         padding: 8%;
         padding-bottom: 0;
+    }
+    #websiteMobile {
+        background: #F5E3E0;
     }
     .yb_section-content__img-container__right-col {
         & :first-child {
