@@ -1731,7 +1731,7 @@ button {
   background: #e9c0ba;
   padding: 8%;
   padding-bottom: 0; }
-.yb_project-page__loveco #websiteMobile {
+.yb_project-page__loveco #styleguideOverview, .yb_project-page__loveco #websiteMobile {
   background: #F5E3E0; }
 .yb_project-page__loveco .yb_section-content__img-container__right-col :first-child {
   margin-bottom: 0; }
