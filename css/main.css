@@ -804,7 +804,8 @@ xl, extra-large: 1920px
   font-family: 'Inter Regular';
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/inter/Inter-Regular.woff.woff") format("woff"); }
+  src: url("/assets/fonts/inter/Inter-Regular.woff.woff") format("woff");
+  font-display: swap; }
 html {
   scroll-behavior: smooth; }
 
@@ -859,14 +860,15 @@ strong {
   font-weight: normal; }
 
 .yb_link {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   .yb_link:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 1px;
     background: #212121;
-    bottom: -10%; }
+    bottom: -5%; }
 
 .yb_img-container__dynamic {
   background: #CaCaCa;

@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: normal;
     src: url('/assets/fonts/inter/Inter-Regular.woff.woff') format('woff');
+    font-display: swap; //temporarily show a system font during webfont load
 }
 
 html {
@@ -64,13 +65,14 @@ strong {
 }
 .yb_link {
     position: relative;
+    display: inline-block;
     &:before {
         content: "";
         position: absolute;
         width: 100%;
         height: 1px;
         background: $black;
-        bottom: -10%;
+        bottom: -5%;
     }
 }
 // custom img - dynamic (with hover & link)
