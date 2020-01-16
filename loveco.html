@@ -68,8 +68,8 @@
                         </a>
                     </li>
                     <li class="yb_navigation-global__list-item">
-                        <a class="yb_navigation-global__list-item-link" href="#" title="Imprint">
-                            Imprint
+                        <a class="yb_navigation-global__list-item-link" href="legal.html" title="Legal information">
+                            Legal
                         </a>
                     </li>
                 </ul>
@@ -128,12 +128,14 @@
                         <h3 class="yb_section-brief__notes-headline">
                             Team
                         </h3>
-                        <p class="yb_section-brief__notes-paragraph">
-                            Yu Bin Jee
-                        </p>
-                        <p class="yb_section-brief__notes-paragraph">
-                            Vreni Jäckle
-                        </p>
+                        <div>
+                            <p class="yb_section-brief__notes-paragraph">
+                                Yu Bin Jee
+                            </p>
+                            <p class="yb_section-brief__notes-paragraph">
+                                Vreni Jäckle
+                            </p>
+                        </div>
                     </div>
                     <div class="yb_section-brief__notes">
                         <h3 class="yb_section-brief__notes-headline">
@@ -201,22 +203,32 @@
                 </div>
             </section>
             
-            <!-- next -->
-            <section class="yb_container yb_section-next" id="next">
-                <div class="yb_section-next__text-container">
-                    <h2 class="yb_section-headline">
-                        Next project
-                    </h2>      
-                    <a href="hammoc.html" class="yb_button" title="Project Hammoc">
-                        <h3 class="yb_section-next__project-title">
-                            hammoc
-                        </h3>
-                        <div class="yb_button">
-                            <div class="pulsating-circle"></div>
-                            View project
-                        </div> 
-                    </a>
+            <!-- Next -->
+            <section class="yb_container yb_section-work" id="next">
+                <div class="col-xs-12 col-s-6 col-sm-8 col-lg-8">
+                    <h2 class="yb_section-headline">Next</h2>
                 </div>
+                <article class="yb_row yb_section-work__project" id="hammoc">
+                    <div class="col-xs-12 col-sm-4 yb_img-container__dynamic">
+                        <a href="hammoc.html" class="yb_img-container__link__dynamic" title="Project hammoc">
+                            <!-- img size: $breakpointLarge (960-1440) max. 658 * 560 (439 * 374) -->                      
+                                <img src="assets/img/projects/hammoc/thumbnail/bookshelf-on-white-wall_658x560.jpg" class="yb_img-container__img__dynamic" alt="bookshelf on a white wall filled with colorful books" />
+                        </a>
+                    </div>
+                    <div class="col-xs-10 col-s-6 col-sm-4 yb_section-work__project-text-container">
+                        <a class="yb_section-work__project-link" href="hammoc.html" title="Project hammoc">
+                            <h3 class="yb_section-work__project-headline">
+                                Hammoc
+                            </h3>
+                            <h4 class="yb_section-work__project-paragraph">
+                                All your links saved at one place
+                            </h4>
+                            <div class="yb_button yb_section-work__project-button">
+                                <div class="pulsating-circle"></div>View project
+                            </div>
+                        </a>
+                    </div>
+                </article> 
             </section>
 
             <!-- footer -->
@@ -229,8 +241,8 @@
                         © 2019 Yu Bin Jee
                     </p>
                 </div>
-                <a class="col-xs-12 col-s-2 yb_footer-global__navigation-item" href="#" title="Imprint">
-                    Imprint
+                <a class="col-xs-12 col-s-2 yb_footer-global__navigation-item" href="legal.html" title="Legal information">
+                    Legal
                 </a>
             </footer>      
 

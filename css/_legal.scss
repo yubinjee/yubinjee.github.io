@@ -1,0 +1,29 @@
+.yb_section-legal {
+    padding-top: 160px;
+    h1 {
+        font-size: $headingThree;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: $headingSix;
+        margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 40px;
+        font-size: $fontSizeSmall;
+        color: $darkgrey;
+    }
+}
+.yb_section-legal__text-container {
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: $breakpointSmall) {
+    h1 {
+        margin-bottom: 104px;
+    }
+    h2 {
+        margin-bottom: 24px;
+    }
+}
