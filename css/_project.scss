@@ -1,16 +1,12 @@
-.yb_project-page__loveco, .yb_project-page__talentroad, .yb_project-page__hammoc {
-    background: $lightgrey;
-    .sticky {
-        background: $lightgrey;
-    }
+.yb_project-page__loveco, .yb_project-page__talentroad, .yb_project-page__hammoc {  
     .yb_footer-global {
         margin-top: 160px;
     }
 }
-.yb_project-page__talentroad {
-    background: white;
+.yb_project-page__hammoc {
+    background: $lightgrey;
     .sticky {
-        background: white;
+        background: $lightgrey;
     }
 }
 /*.yb_project-page__loveco {

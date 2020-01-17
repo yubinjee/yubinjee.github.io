@@ -1534,17 +1534,13 @@ button {
 
   .yb_section-contact__paragraph {
     margin-bottom: 104px; } }
-.yb_project-page__loveco, .yb_project-page__talentroad, .yb_project-page__hammoc {
-  background: #f6f6f6; }
-  .yb_project-page__loveco .sticky, .yb_project-page__talentroad .sticky, .yb_project-page__hammoc .sticky {
-    background: #f6f6f6; }
-  .yb_project-page__loveco .yb_footer-global, .yb_project-page__talentroad .yb_footer-global, .yb_project-page__hammoc .yb_footer-global {
-    margin-top: 160px; }
+.yb_project-page__loveco .yb_footer-global, .yb_project-page__talentroad .yb_footer-global, .yb_project-page__hammoc .yb_footer-global {
+  margin-top: 160px; }
 
-.yb_project-page__talentroad {
-  background: white; }
-  .yb_project-page__talentroad .sticky {
-    background: white; }
+.yb_project-page__hammoc {
+  background: #f6f6f6; }
+  .yb_project-page__hammoc .sticky {
+    background: #f6f6f6; }
 
 /*.yb_project-page__loveco {
     background: #fdeae6;
