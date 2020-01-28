@@ -1507,7 +1507,7 @@ button {
     height: 480px;
     margin-bottom: 0; }
 
-  #loveco .yb_img-container__dynamic {
+  #loveco .yb_img-container__dynamic, #accessibleDesign .yb_img-container__dynamic {
     order: 2; } }
 @media (min-width: 1280px) {
   #work .yb_img-container__dynamic {
