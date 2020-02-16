@@ -288,7 +288,7 @@
         margin-bottom: 80px;
     }
     .yb_img-container__dynamic {
-        height: 280px;
+        height: calc( 100vw * 0.534 );
         margin-bottom: 40px;
     }
     .yb_button {
@@ -344,7 +344,7 @@
     }
     #work {
         .yb_img-container__dynamic {
-            height: 400px;
+            height: calc( 100vw * 0.417 );
         }
     }
 }
@@ -367,23 +367,27 @@
             margin-bottom: 40px;
         }
         .yb_img-container__dynamic {
-            height: 480px;
+            height: calc( 100vw * 0.294 );
+            max-height: 424px;
             margin-bottom: 0;
         }
     }
-    #loveco, #accessibleDesign {
+    #loveco, #accessibleDesign, #foodhere {
         .yb_img-container__dynamic {
             order: 2;
+            height: calc( 100vw * 0.388 );
+            max-height: 558px;
         }
     }
 }
+/*
 @media (min-width: $breakpointLarge) {
     #work {
         .yb_img-container__dynamic {
             height: 560px;
         }
     }
-}
+}*/
 
 ///////////////////////////// Contact /////////////////////////////
 .yb_section-contact {

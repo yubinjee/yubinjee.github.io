@@ -849,6 +849,7 @@ h6 {
   font-size: 18px; }
 
 p {
+  font-size: 16px;
   margin: 0;
   line-height: 1.8; }
 
@@ -871,7 +872,6 @@ strong {
     bottom: -5%; }
 
 .yb_img-container__dynamic {
-  background: #CaCaCa;
   padding: 0;
   position: relative;
   overflow: hidden; }
@@ -879,12 +879,14 @@ strong {
 .yb_img-container__img__dynamic {
   transition: ease-out 0.6s;
   position: absolute;
-  -webkit-filter: grayscale(60%);
-  filter: grayscale(60%);
   height: 100%;
   top: 0;
   left: 50%;
   transform: translateX(-50%); }
+  @media (min-width: 1024px) {
+    .yb_img-container__img__dynamic {
+      -webkit-filter: grayscale(60%);
+      filter: grayscale(60%); } }
 
 .yb_img-container__link__dynamic {
   position: absolute;
@@ -1444,7 +1446,7 @@ button {
 #work .yb_section-headline {
   margin-bottom: 80px; }
 #work .yb_img-container__dynamic {
-  height: 280px;
+  height: calc( 100vw * 0.534 );
   margin-bottom: 40px; }
 #work .yb_button {
   margin-top: 56px; }
@@ -1486,7 +1488,7 @@ button {
     padding-left: 10px; }
 
   #work .yb_img-container__dynamic {
-    height: 400px; } }
+    height: calc( 100vw * 0.417 ); } }
 @media (min-width: 960px) {
   .yb_section-work {
     margin-bottom: 200px;
@@ -1504,14 +1506,22 @@ button {
   #work .yb_section-headline {
     margin-bottom: 40px; }
   #work .yb_img-container__dynamic {
-    height: 480px;
+    height: calc( 100vw * 0.294 );
+    max-height: 424px;
     margin-bottom: 0; }
 
-  #loveco .yb_img-container__dynamic, #accessibleDesign .yb_img-container__dynamic {
-    order: 2; } }
-@media (min-width: 1280px) {
-  #work .yb_img-container__dynamic {
-    height: 560px; } }
+  #loveco .yb_img-container__dynamic, #accessibleDesign .yb_img-container__dynamic, #foodhere .yb_img-container__dynamic {
+    order: 2;
+    height: calc( 100vw * 0.388 );
+    max-height: 558px; } }
+/*
+@media (min-width: $breakpointLarge) {
+    #work {
+        .yb_img-container__dynamic {
+            height: 560px;
+        }
+    }
+}*/
 .yb_section-contact {
   padding-top: 80px;
   flex-direction: column; }
@@ -1566,38 +1576,40 @@ button {
   margin-bottom: 56px; }
 
 .yb_section-thumbnail__img-container {
-  background: #CaCaCa;
+  /*background: $grey;*/
   padding: 0;
   position: relative;
-  overflow: hidden;
-  height: 400px; }
+  overflow: hidden; }
 
 .yb_section-thumbnail__img-container__img {
-  position: absolute;
-  height: 100%;
-  top: 0;
+  width: 100%;
+  /*top: 0;
   left: 50%;
   transform: translateX(-50%);
-  /*-webkit-filter: grayscale(60%);
+  -webkit-filter: grayscale(60%);
   filter: grayscale(60%);*/
-  -webkit-filter: brightness(0.9);
-  filter: brightness(0.9); }
+  -webkit-filter: brightness(0.95);
+  filter: brightness(0.95); }
 
+/*
 .yb_section-thumbnail__img-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #ffffff5c, transparent); }
-
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #ffffff5c, transparent);
+}*/
 @media (min-width: 600px) {
   .yb_section-thumbnail {
     margin-bottom: 80px; }
 
-  .yb_section-thumbnail__img-container {
-    height: 480px; } }
-@media (min-width: 1024px) {
-  .yb_section-thumbnail__img-container {
-    height: 560px; } }
+    /*.yb_section-thumbnail__img-container {
+        height: 480px;
+    }
+}
+@media (min-width: $breakpointMedium) {
+    .yb_section-thumbnail__img-container {
+        height: 720px;
+    }*/ }
 .yb_section-brief {
   align-items: flex-start;
   margin-bottom: 104px;
@@ -1744,7 +1756,8 @@ button {
     justify-content: flex-start; }
   #next .yb_img-container__dynamic {
     display: none;
-    height: calc(560px * 2 / 3); }
+    height: calc(100vw * 0.259);
+    max-height: 373px; }
   #next .yb_section-work__project-text-container {
     padding-left: 10px; }
   #next .yb_section-work__project-paragraph {
@@ -1762,7 +1775,9 @@ button {
     display: block; }
   #next .yb_section-work__project-text-container {
     padding-right: 0;
-    padding-left: 5%; }
+    padding-left: 0; }
+  #next .yb_section-work__project-paragraph {
+    font-size: 28px; }
   #next .yb_section-work__project-button {
     margin-top: 0; } }
 .yb_section-legal {

@@ -52,7 +52,7 @@ h6 {
     font-size: $headingSix;
 }
 p {
-    $fontSizeMedium: 16px;
+    font-size: $fontSizeMedium;
     margin:0;
     line-height: 1.8;
 }
@@ -77,7 +77,7 @@ strong {
 }
 // custom img - dynamic (with hover & link)
 .yb_img-container__dynamic {
-    background: $grey;
+    //background: $grey;
     padding: 0;
     position: relative;
     overflow: hidden;
@@ -85,12 +85,14 @@ strong {
 .yb_img-container__img__dynamic {
     transition: ease-out 0.6s;
     position: absolute;
-    -webkit-filter: grayscale(60%);
-    filter: grayscale(60%);
     height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    @media (min-width: $breakpointMedium) {
+        -webkit-filter: grayscale(60%);
+        filter: grayscale(60%);
+    }
 }
 .yb_img-container__link__dynamic {
     position: absolute;
