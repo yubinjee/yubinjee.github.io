@@ -1200,6 +1200,11 @@ button {
     content: "";
     box-sizing: border-box; }
 
+.yb_footer-global__link-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
 .yb_section-intro {
   padding: 160px 5% 80px;
   min-height: 500px; }
