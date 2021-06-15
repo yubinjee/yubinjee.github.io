@@ -974,11 +974,8 @@ button {
   display: flex; }
 
 .yb_header-global__logo-name {
-  font-weight: 700; }
-
-.yb_header-global__logo-title {
-  color: #7A7A7A;
-  margin-left: 8px; }
+  font-weight: 700;
+  font-size: 20px; }
 
 .yb_navigation-global {
   background: white;
