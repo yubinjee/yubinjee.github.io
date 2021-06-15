@@ -1,67 +1,35 @@
-@font-face {
-    font-family: 'Inter Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/assets/fonts/inter/Inter-Regular.woff.woff') format('woff');
-    font-display: swap; //temporarily show a system font during webfont load
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 body {
     scroll-behavior: smooth;
     height: 100%;
-    font-family: 'Inter Regular', sans-serif;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-    color: $c-gray-dark;
     max-width: 1440px;
     margin: auto;
 }
+
 main {
     height: 100%;
     overflow: auto;
     max-width: 1440px;
     margin: auto;
 }
-h1, h2, h3, h4, h5, h6{
-    margin: 0;
-    //line-height: 1.25;
-    //letter-spacing: 1px;
-}
-h1 {
-    font-size: $fs-h1;
-}
-h2 {
-    font-size: $fs-h2;
-}
-h3 {
-    font-size: $fs-h3;
-    font-weight: 500;
-}
-h4 {
-    font-size: $fs-h4;
-}
-h5 {
-    font-size: $fs-h5;
-}
-h6 {
-    font-size: $fs-h6;
-}
-p {
-    font-size: $fs-body;
-    margin:0;
-    line-height: 1.8;
-}
+
 a {
     color: $c-gray-dark;
     text-decoration: none;
 }
-strong {
-    font-weight: normal;
-}
+
 .yb_link {
     position: relative;
     display: inline-block;
@@ -122,7 +90,7 @@ button {
 }
 .yb_button {
     display: inline-block;
-    font-weight: 600;
+    font-weight: $fw-bold;
     transition: $tr-fast;
     padding: 8px 8px 8px 0;
     position: relative;
@@ -174,7 +142,7 @@ button {
   }
 .yb_section-headline {
     font-size: $fs-h6;
-    font-weight: 500;
+    font-weight: $fw-medium;
     margin-bottom: 40px;
     color: $c-gray;
     position: relative;
@@ -242,7 +210,7 @@ z-index: 999;
     display: flex;
 }
 .yb_header-global__logo-name {
-    font-weight: 600;
+    font-weight: $fw-bold;
 }
 .yb_header-global__logo-title {
     color: $c-gray;
@@ -282,7 +250,7 @@ z-index: 999;
 .yb_navigation-global__list-item-link {
     display: inline-block;
     font-size: $fs-h5;
-    font-weight: 500;
+    font-weight: $fw-medium;
     color: $c-gray-dark;
     transition: $tr-fast;
     padding: 10px 10%;
@@ -382,7 +350,7 @@ z-index: 999;
     margin-bottom: 24px;
 }
 .yb_footer-global__paragraph {
-    font-weight: 600;
+    font-weight: $fw-bold;
     margin-bottom: 8px;
 }
 .yb_footer-global__copyright-note {

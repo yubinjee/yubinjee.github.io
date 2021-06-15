@@ -792,23 +792,20 @@
     transform: scale(1); }
   100% {
     transform: scale(0.9); } }
-@font-face {
-  font-family: 'Inter Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: url("/assets/fonts/inter/Inter-Regular.woff.woff") format("woff");
-  font-display: swap; }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
 html {
   scroll-behavior: smooth; }
 
 body {
   scroll-behavior: smooth;
   height: 100%;
-  font-family: 'Inter Regular', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  color: #232323;
   max-width: 1440px;
   margin: auto; }
 
@@ -818,39 +815,9 @@ main {
   max-width: 1440px;
   margin: auto; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
-
-h1 {
-  font-size: 48px; }
-
-h2 {
-  font-size: 36px; }
-
-h3 {
-  font-size: 28px;
-  font-weight: 500; }
-
-h4 {
-  font-size: 24px; }
-
-h5 {
-  font-size: 20px; }
-
-h6 {
-  font-size: 18px; }
-
-p {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.8; }
-
 a {
   color: #232323;
   text-decoration: none; }
-
-strong {
-  font-weight: normal; }
 
 .yb_link {
   position: relative;
@@ -905,7 +872,7 @@ button {
 
 .yb_button {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 8px 8px 8px 0;
   position: relative;
@@ -1007,7 +974,7 @@ button {
   display: flex; }
 
 .yb_header-global__logo-name {
-  font-weight: 600; }
+  font-weight: 700; }
 
 .yb_header-global__logo-title {
   color: #7A7A7A;
@@ -1127,7 +1094,7 @@ button {
   margin-bottom: 24px; }
 
 .yb_footer-global__paragraph {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 8px; }
 
 .yb_footer-global__copyright-note {
@@ -1197,6 +1164,43 @@ button {
   align-items: center;
   justify-content: flex-end; }
 
+body {
+  font-family: Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #232323; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.6; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  font-size: 18px; }
+
+p {
+  font-size: 16px;
+  margin: 0; }
+
+strong {
+  font-weight: 400; }
+
 .yb_section-intro {
   padding: 160px 5% 80px;
   min-height: 500px; }
@@ -1207,7 +1211,7 @@ button {
   font-weight: 400; }
 
 .yb_section-intro__headline-black {
-  font-weight: 600; }
+  font-weight: 400; }
 
 .yb_section-intro__paragraph {
   font-size: 16px; }

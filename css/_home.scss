@@ -6,10 +6,10 @@
 .yb_section-intro__headline{
     margin-bottom: 24px;
     font-size: $fs-h2;
-    font-weight: 400;
+    font-weight: $fw-regular;
 }
 .yb_section-intro__headline-black {
-    font-weight: 600;
+    font-weight: $fw-regular;
 }
 .yb_section-intro__paragraph {
     font-size: $fs-medium;
