@@ -1,11 +1,10 @@
-@import "variables.scss";
-@import "animation.scss";
+@import "abstracts/variables";
+@import "abstracts/grid";
+@import "abstracts/mixin";
 
-//import global
-@import "grid.scss";
-@import "global.scss";
+@import "base/animation";
+@import "base/global";
 
-//import pages
-@import "home.scss";
-@import "project.scss";
-@import "legal.scss";
+@import "home";
+@import "project";
+@import "legal";

@@ -1,17 +1,17 @@
 .yb_section-legal {
     padding-top: 160px;
     h1 {
-        font-size: $headingThree;
+        font-size: $fs-h3;
         margin-bottom: 40px;
     }
     h2 {
-        font-size: $headingSix;
+        font-size: $fs-h6;
         margin-bottom: 16px;
     }
     p {
         margin-bottom: 40px;
-        font-size: $fontSizeSmall;
-        color: $darkgrey;
+        font-size: $fs-small;
+        color: $c-gray;
     }
 }
 .yb_section-legal__text-container {

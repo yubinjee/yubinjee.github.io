@@ -4,9 +4,9 @@
     }
 }
 .yb_project-page__hammoc {
-    background: $lightgrey;
+    background: $c-gray-light;
     .sticky {
-        background: $lightgrey;
+        background: $c-gray-light;
     }
 }
 /*.yb_project-page__loveco {
@@ -17,16 +17,16 @@
 }
 .yb_project-page__talentroad {
     //background: #e0e0e0;
-    background: $lightgrey;
+    background: $c-gray-light;
     .sticky {
         //background: #e0e0e0;
-        background: $lightgrey;
+        background: $c-gray-light;
     }
 }
 .yb_project-page__hammoc{
-    background: $lightgrey;
+    background: $c-gray-light;
     .sticky {
-        background: $lightgrey;
+        background: $c-gray-light;
     }
 }*/
 ///////////////////////////// Thumbnail /////////////////////////////
@@ -34,7 +34,6 @@
     margin-bottom: 56px;
 }
 .yb_section-thumbnail__img-container {
-    /*background: $grey;*/
     padding: 0;
     position: relative;
     overflow: hidden;
@@ -82,14 +81,14 @@
     margin-bottom: 56px;
 }
 .yb_section-brief__project-title {
-    font-size: $headingFive;
+    font-size: $fs-h5;
     font-weight: 500;
     text-transform: lowercase;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 .yb_section-brief__project-slogan {
-    font-size: $headingOne;
+    font-size: $fs-h1;
     line-height: 1.25;
     
 }
@@ -107,19 +106,19 @@
     }
 }
 .yb_section-brief__notes-headline {
-    font-size: $fontSizeSmall;
+    font-size: $fs-small;
     font-weight: 600;
     margin-bottom: 0px;
     min-width: 20%; 
 }
 .yb_section-brief__notes-paragraph {
-    font-size: $fontSizeSmall;
+    font-size: $fs-small;
     line-height: 1.5;
     margin-bottom: 8px;
 }
 .yb_section-brief__notice {
     margin-top: 40px;
-    color: $darkgrey;
+    color: $c-gray;
 }
 @media (min-width: $breakpointSmall) {
     .yb_section-brief__notes-container {
@@ -152,7 +151,7 @@
     padding: 0;
 }
 #styleguideOverview {
-    background: $black;
+    background: $c-gray-dark;
     padding: 10% 0;
 }
 #websiteHome {
@@ -271,7 +270,7 @@
             padding-left: 0;
         }
         .yb_section-work__project-paragraph {
-            font-size: $headingThree;
+            font-size: $fs-h3;
         }
         .yb_section-work__project-button {
             margin-top: 0;

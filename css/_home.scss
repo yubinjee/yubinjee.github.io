@@ -5,18 +5,16 @@
 }
 .yb_section-intro__headline{
     margin-bottom: 24px;
-    font-size: $headingTwo;
+    font-size: $fs-h2;
     font-weight: 400;
 }
 .yb_section-intro__headline-black {
-    //color: $black;
     font-weight: 600;
 }
 .yb_section-intro__paragraph {
-    font-size: $fontSizeMedium;
-    //color: $darkgrey;
+    font-size: $fs-medium;
     b {
-        color: $black;
+        color: $c-gray-dark;
     }
 }
 @media (min-width: $breakpointSmallMedium) {
@@ -31,7 +29,7 @@
 .avatar-background {
     width: 200px;
     height: 200px;
-    background: $blue;
+    background: $c-blue;
     margin-bottom: 0;
     margin-left: -30px;
     border-radius: 100%;
@@ -54,7 +52,7 @@
         align-items: center;
         text-align: center;
         opacity: 0;
-        transition: $transitionFast;
+        transition: $tr-fast;
     }
     &:hover:before {
         opacity: 1;
@@ -106,7 +104,7 @@
         width: 120px;
         height: 200px;
         border-radius: 100px 100px 0 0;
-        background: $black;
+        background: $c-gray-dark;
     }
     .fringe {
         z-index: 4;
@@ -114,7 +112,7 @@
         left: 95px;
         width: 63px;
         height: 28px;
-        background: $black;
+        background: $c-gray-dark;
         border-radius: 0 0 100px 100px;
         transform: rotate(30deg);
         &:before {
@@ -124,7 +122,7 @@
             left: -20px;
             width: 47px;
             height: 30px;
-            background: $black;
+            background: $c-gray-dark;
             border-radius: 100%;
             transform: rotate(-45deg);
         }
@@ -144,7 +142,7 @@
         left: 80px;
         width: 10px;
         height: 10px;
-        background: $black;
+        background: $c-gray-dark;
         border-radius: 100%;
         animation-name: eyeblinking-left;
         animation-duration: 4s;
@@ -156,7 +154,7 @@
             left: 50px;
             width: 10px;
             height: 10px;
-            background: $black;
+            background: $c-gray-dark;
             border-radius: 100%;
             animation-name: eyeblinking-right;
             animation-duration: 4s;
@@ -187,10 +185,10 @@
         top: 96px;
         z-index: 5;
         left: 100px;
-        border: solid 3px $red;
-        border-color: transparent transparent $red transparent;
+        border: solid 3px $c-red;
+        border-color: transparent transparent $c-red transparent;
         border-radius: 0 0 150px 30%/90px;
-        transition: $transition;
+        transition: $tr-slow;
     }
     .body {
         z-index: 1;
@@ -215,14 +213,14 @@
 
 ///////////////////////////// ABOUT /////////////////////////////
 .yb_section-about {
-    background: $lightgrey;
+    background: $c-gray-light;
     padding-top: 80px;
     padding-bottom: 80px;
     align-items: flex-start;
     justify-content: flex-start;
 }
 .yb_section-about__paragraph {
-    font-size: $headingFour;
+    font-size: $fs-h4;
     margin-bottom: 80px;
 }
 #about {
@@ -234,7 +232,7 @@
     margin-bottom: 24px;
 }
 .yb_section-about__experience-headline {
-    font-size: $fontSizeMedium;
+    font-size: $fs-medium;
 }
 @media (min-width: $breakpointSmall) {
     .yb_section-about {
@@ -253,7 +251,7 @@
         text-transform: lowercase;
     }
     .yb_section-about__experience-year, .yb_section-about__experience-role {
-        font-size: $headingFour;
+        font-size: $fs-h4;
         line-height: 1.5;
     }
 }
@@ -274,12 +272,12 @@
         width: 100%;
     }
     .yb_section-about__experience-headline {
-        font-size: $fontSizeMedium;
+        font-size: $fs-medium;
         text-transform: none;
         margin-bottom: 0px;
     }
     .yb_section-about__experience-year, .yb_section-about__experience-role {
-        font-size: $fontSizeMedium;
+        font-size: $fs-medium;
     }
 }
 ///////////////////////////// Work /////////////////////////////
@@ -312,14 +310,14 @@
     padding-left: 5%;
 }
 .yb_section-work__project-headline {
-    font-size: $fontSizeMedium;
+    font-size: $fs-medium;
     font-weight: 500;
     text-transform: lowercase;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 .yb_section-work__project-paragraph {
-    font-size: $headingTwo;
+    font-size: $fs-h2;
     line-height: 1.25;
 }
 .yb_section-work__project-link {
@@ -398,12 +396,12 @@
     }
 }
 .yb_section-contact__headline {
-    font-size: $headingSix;
+    font-size: $fs-h6;
     margin-bottom: 32px;
     margin-top: 104px;
 }
 .yb_section-contact__paragraph {
-    font-size: $headingTwo;
+    font-size: $fs-h2;
     margin-bottom: 64px;
     line-height: 1.5;
 }
