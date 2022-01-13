@@ -1,0 +1,257 @@
+//////////VARIABLE//////////
+
+// color
+$c-grey-lightest: #cfcfcf;
+$c-grey-light: #525252;
+
+// font size
+$fs-body: 16px;
+
+// line height
+$lh-body: 1.8;
+$lh-heading: 1.4;
+
+// breakpoints
+$breakpointSmall: 680px; //xs
+$breakpointSmallMedium: 960px; //sm
+$breakpointMedium: 1024px; // md
+$breakpointLarge: 1280px; //lg
+
+//////////GLOBAL//////////
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(114.32deg, #3A3D41 0%, #212623 50.52%, #1F2123 100%);
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-size: $fs-body;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.4px;
+  line-height: $lh-body; 
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: $lh-heading;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+  max-width: 640px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: solid 2px;
+  border-color: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.link-arrow::after {
+  content: url(../assets/icon/arrow-social.svg);
+  margin-left: 4px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 14px;
+  line-height: 2.2;
+  font-weight: 200;
+}
+
+header, main, footer {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: auto;
+}
+
+//////////HEADER//////////
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo {
+  border-bottom: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+
+.social {
+  margin-left: 64px;
+  font-size: 14px;
+}
+
+//////////MAIN CONTENT//////////
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.text-container {
+  margin-top: 40px;
+  width: 100%;
+  padding-right: 80px;
+}
+
+.subtitle {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.hand {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.has--top-border {
+  margin-top: 184px;
+  padding-top: 40px;
+  border-top: 1px solid $c-grey-light;
+}
+
+.list-wrapper {
+  display: flex;
+}
+
+.list-wrapper > li {
+  width: 50%;
+  max-width: 240px;
+}
+
+.cap-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.img-container {
+  max-width: 440px;
+  max-height: 680px;
+}
+
+//////////FOOTER//////////
+
+footer {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  color: $c-grey-lightest;
+  a {
+    color: white;
+  }
+}
+
+@media (max-width: $breakpointMedium) {
+  header, main, footer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  main {
+    flex-wrap: wrap;
+  }
+  .img-container {
+    order: 1;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+  .text-container {
+    order: 2;
+    padding-right: 0;
+  }
+} 
+
+@media (max-width: $breakpointSmall) {
+  header, main, footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .social {
+    margin-left: 6vw;
+  }
+  main {
+    padding-top: 40px;
+  }
+  .img-container {
+    width: 40vw;
+    height: 40vw;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .is--hidden-mobile {
+    display: none;
+  }
+  .has--top-border {
+    margin-top: 80px;
+  }
+  footer {
+    padding-top: 0;
+    flex-wrap: wrap;
+    section:first-child {
+      width: 100%;
+      border-top: 1px solid $c-grey-light;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}

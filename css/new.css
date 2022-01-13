@@ -1,16 +1,6 @@
-/*@import "abstracts/variables";
-@import "abstracts/grid";
-@import "abstracts/mixin";
-
-@import "base/animation";
-@import "base/global";
-@import "base/typography";
-
-@import "home";
-@import "project";
-@import "legal";*/
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html {
   min-width: 100vw;
@@ -28,7 +18,8 @@ body {
 .img {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -70,9 +61,15 @@ header, main, footer {
   margin: auto; }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 24px;
   padding-bottom: 24px; }
 
@@ -88,8 +85,12 @@ header {
   font-size: 14px; }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 80px;
   padding-bottom: 80px; }
 
@@ -103,41 +104,83 @@ main {
   margin-bottom: 40px; }
 
 .hand {
-  animation-name: wave-animation;
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
   /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
   /* Change to speed up or slow down */
-  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   /* Never stop waving :) */
-  transform-origin: 70% 70%;
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
   /* Pivot around the bottom-left palm */
   display: inline-block; }
 
-@keyframes wave-animation {
+@-webkit-keyframes wave-animation {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   10% {
-    transform: rotate(14deg); }
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg); }
   /* The following five values can be played with to make the waving more or less extreme */
   20% {
-    transform: rotate(-8deg); }
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg); }
   30% {
-    transform: rotate(14deg); }
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg); }
   40% {
-    transform: rotate(-4deg); }
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
   50% {
-    transform: rotate(10deg); }
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); }
   60% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   /* Reset for the last half to pause */
   100% {
-    transform: rotate(0deg); } }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg); }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg); }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg); }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 .has--top-border {
   margin-top: 184px;
   padding-top: 40px;
   border-top: 1px solid #525252; }
 
 .list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .list-wrapper > li {
@@ -159,9 +202,15 @@ main {
 footer {
   padding-top: 40px;
   padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-size: 14px;
   color: #cfcfcf; }
   footer a {
@@ -173,17 +222,22 @@ footer {
     padding-right: 80px; }
 
   main {
-    flex-wrap: wrap; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
 
   .img-container {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 240px;
     height: 240px;
     overflow: hidden;
     border-radius: 100%; }
 
   .text-container {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     padding-right: 0; } }
 @media (max-width: 680px) {
   header, main, footer {
@@ -213,11 +267,12 @@ footer {
 
   footer {
     padding-top: 0;
-    flex-wrap: wrap; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     footer section:first-child {
       width: 100%;
       border-top: 1px solid #525252;
       padding-top: 40px;
       padding-bottom: 40px; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=new.css.map */
